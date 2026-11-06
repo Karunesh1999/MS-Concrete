@@ -130,71 +130,98 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
       {/* ======================================================== */}
       {/* 2. NARRATIVE SECTION: 25 YEARS OF TRUST */}
       {/* ======================================================== */}
-      <section className="w-full bg-concrete-sand py-20 lg:py-28">
+      <section className="w-full bg-[#f8f9fa] py-20 lg:py-28 border-b border-stone-200">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Column: Architectural Imagery & Overlapping Cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            {/* Left Column: Architectural Imagery & Professional Badge Card */}
             <div className="lg:col-span-6 relative">
-              <div
-                className="w-full h-[480px] bg-cover bg-center shadow-xl relative"
-                style={{
-                  backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuCepbAk4YDiu-W7dS2GmMLicPMQYzlpVHW-9BvEN1t3-kY70r3iiL9dfIJ-hORl-BU_5xZd3bwJp6pQsEFH3ndPWBYYmIfND49KaqhZM3B7JBGtlJarIgJozzsPVHBcSup17hlB0qEj5QYSVR-2ZWKXKx2KZTiGHaP4xJ2Dkb_2s0HTY5iVBH2R7wJ7wGidHiiAAHnJB7ClPLcZ7QjKAmjky6HLCVXhq1uWj7dd5a0")`,
-                }}
-              >
-                <div className="absolute inset-0 bg-stone-charcoal/20" />
+              {/* Outer decorative border/frame */}
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-stone-200 group">
+                <div
+                  className="w-full h-[500px] sm:h-[540px] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                  style={{
+                    backgroundImage: `url("/images/heritage-headquarters.jpg")`,
+                  }}
+                >
+                  {/* Subtle vignette gradient for legibility */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                </div>
+
+                {/* Integrated Professional Bottom Badge */}
+                <div className="absolute bottom-0 inset-x-0 p-6 sm:p-7 bg-gradient-to-t from-[#0b0f16] via-[#0b0f16]/95 to-transparent text-white">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div className="flex items-center gap-3.5">
+                      <div className="w-11 h-11 rounded-xl bg-[#ea580c] flex items-center justify-center text-white shrink-0 shadow-lg">
+                        <span className="material-symbols-outlined text-2xl font-bold">verified</span>
+                      </div>
+                      <div>
+                        <div className="font-mono text-xs uppercase tracking-wider text-surveyor-lime font-black">
+                          Inland Empire Operations Hub
+                        </div>
+                        <div className="font-display text-sm sm:text-base font-bold text-white">
+                          Menifee Headquarters • C-8 Lic. #984210
+                        </div>
+                      </div>
+                    </div>
+                    <span className="self-start sm:self-center px-3.5 py-1.5 bg-white/10 border border-white/20 rounded-full font-mono text-[11px] uppercase font-bold text-zinc-200">
+                      $5M Bonded
+                    </span>
+                  </div>
+                </div>
               </div>
 
-              {/* Overlapping Micro Stats Panel */}
-              <div className="absolute -bottom-8 -right-4 lg:-right-8 bg-stone-charcoal p-6 max-w-xs shadow-2xl text-concrete-sand border border-white/10">
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="w-3 h-3 bg-surveyor-lime rounded-full" />
-                  <span className="font-mono text-xs uppercase text-surveyor-lime font-bold">
-                    Inland Empire Division
-                  </span>
+              {/* Floating Quality Seal Chip */}
+              <div className="absolute -top-4 -right-2 sm:-right-4 bg-[#0b0f16] border-2 border-[#ea580c] text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3">
+                <span className="font-display text-2xl sm:text-3xl font-black text-[#ea580c]">25+</span>
+                <div className="text-left font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-200 leading-tight">
+                  Years Proven<br /><span className="text-white font-bold">Field Reliability</span>
                 </div>
-                <p className="font-sans text-xs text-concrete-aggregate leading-relaxed">
-                  Engineered mixes, seismic rebar cages, and laser precision grading certified for heavy architectural load.
-                </p>
               </div>
             </div>
 
             {/* Right Column: Structured Heritage Content */}
             <div className="lg:col-span-6 flex flex-col justify-center">
-              <div className="flex items-center gap-2 mb-3">
-                <span className="w-1.5 h-6 bg-primary" />
-                <span className="font-mono text-xs uppercase tracking-wider text-secondary font-semibold">
-                  Operational Legacy
+              <div className="flex items-center gap-2.5 mb-3">
+                <span className="w-2 h-6 bg-[#ea580c] rounded-sm" />
+                <span className="font-mono text-xs uppercase tracking-wider text-stone-700 font-extrabold">
+                  Operational Legacy &amp; Standards
                 </span>
               </div>
               
-              <h2 className="font-display text-3xl sm:text-4xl text-stone-charcoal uppercase tracking-tight font-bold mb-6">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-stone-900 uppercase tracking-tight font-black mb-6 leading-tight">
                 25 Years of Proven Field Reliability
               </h2>
               
-              <p className="font-sans text-base sm:text-lg text-on-surface-variant mb-6 leading-relaxed">
+              <p className="font-sans text-base sm:text-lg text-stone-700 mb-5 leading-relaxed font-normal">
                 Concrete company with 25+ years of experience in the industry managing residential and commercial projects. MSCC specializes in custom concrete, decorative stamped concrete, color and seal concrete, broom finish concrete for sidewalks, driveways, patios, foundation slabs, pool decks, patch and repair concrete, approach slabs, retaining walls, curb and gutter (civil concrete, light commercial and heavy commercial).
               </p>
               
-              <p className="font-sans text-sm text-secondary mb-8 leading-relaxed">
+              <p className="font-sans text-sm sm:text-base text-stone-600 mb-8 leading-relaxed font-medium">
                 Operating from our headquarters in Menifee, CA, we combine architectural craftsmanship with structural engineering standards to build foundations that endure.
               </p>
 
-              {/* Core Specialization Badges */}
-              <div className="grid grid-cols-3 gap-4 pt-2">
-                <div className="bg-surface-container-high p-4 flex flex-col items-center text-center">
-                  <span className="material-symbols-outlined text-primary text-3xl mb-1">domain</span>
-                  <span className="font-display text-sm font-bold uppercase text-stone-charcoal">Architecture</span>
-                  <span className="font-mono text-[10px] text-secondary uppercase mt-0.5">Design-Grade</span>
+              {/* Core Specialization Badges - Professional Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                <div className="bg-white p-5 rounded-xl border-2 border-stone-200 shadow-md hover:border-[#ea580c] transition-all flex flex-col items-center text-center group cursor-pointer hover:-translate-y-0.5">
+                  <div className="w-12 h-12 rounded-xl bg-stone-100 group-hover:bg-[#ea580c]/10 text-stone-900 group-hover:text-[#ea580c] flex items-center justify-center mb-3 transition-colors">
+                    <span className="material-symbols-outlined text-2xl font-bold">domain</span>
+                  </div>
+                  <span className="font-display text-sm font-black uppercase text-stone-900 tracking-tight">Architecture</span>
+                  <span className="font-mono text-[11px] text-stone-500 uppercase mt-1 font-bold">Design-Grade</span>
                 </div>
-                <div className="bg-surface-container-high p-4 flex flex-col items-center text-center">
-                  <span className="material-symbols-outlined text-primary text-3xl mb-1">design_services</span>
-                  <span className="font-display text-sm font-bold uppercase text-stone-charcoal">Decorative</span>
-                  <span className="font-mono text-[10px] text-secondary uppercase mt-0.5">Color &amp; Seal</span>
+                <div className="bg-white p-5 rounded-xl border-2 border-stone-200 shadow-md hover:border-[#ea580c] transition-all flex flex-col items-center text-center group cursor-pointer hover:-translate-y-0.5">
+                  <div className="w-12 h-12 rounded-xl bg-stone-100 group-hover:bg-[#ea580c]/10 text-stone-900 group-hover:text-[#ea580c] flex items-center justify-center mb-3 transition-colors">
+                    <span className="material-symbols-outlined text-2xl font-bold">design_services</span>
+                  </div>
+                  <span className="font-display text-sm font-black uppercase text-stone-900 tracking-tight">Decorative</span>
+                  <span className="font-mono text-[11px] text-stone-500 uppercase mt-1 font-bold">Color &amp; Seal</span>
                 </div>
-                <div className="bg-surface-container-high p-4 flex flex-col items-center text-center">
-                  <span className="material-symbols-outlined text-primary text-3xl mb-1">engineering</span>
-                  <span className="font-display text-sm font-bold uppercase text-stone-charcoal">Construction</span>
-                  <span className="font-mono text-[10px] text-secondary uppercase mt-0.5">Heavy Civil</span>
+                <div className="bg-white p-5 rounded-xl border-2 border-stone-200 shadow-md hover:border-[#ea580c] transition-all flex flex-col items-center text-center group cursor-pointer hover:-translate-y-0.5">
+                  <div className="w-12 h-12 rounded-xl bg-stone-100 group-hover:bg-[#ea580c]/10 text-stone-900 group-hover:text-[#ea580c] flex items-center justify-center mb-3 transition-colors">
+                    <span className="material-symbols-outlined text-2xl font-bold">engineering</span>
+                  </div>
+                  <span className="font-display text-sm font-black uppercase text-stone-900 tracking-tight">Construction</span>
+                  <span className="font-mono text-[11px] text-stone-500 uppercase mt-1 font-bold">Heavy Civil</span>
                 </div>
               </div>
             </div>

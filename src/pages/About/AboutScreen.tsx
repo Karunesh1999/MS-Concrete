@@ -41,16 +41,16 @@ export const AboutScreen: React.FC<AboutScreenProps> = ({ onOpenEstimate }) => {
 
           <div className="lg:col-span-6 relative">
             <div
-              className="w-full h-[440px] bg-cover bg-center rounded-xl shadow-xl relative"
+              className="w-full h-[460px] bg-cover bg-center rounded-2xl shadow-2xl relative border-2 border-stone-200 overflow-hidden group"
               style={{
-                backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuCepbAk4YDiu-W7dS2GmMLicPMQYzlpVHW-9BvEN1t3-kY70r3iiL9dfIJ-hORl-BU_5xZd3bwJp6pQsEFH3ndPWBYYmIfND49KaqhZM3B7JBGtlJarIgJozzsPVHBcSup17hlB0qEj5QYSVR-2ZWKXKx2KZTiGHaP4xJ2Dkb_2s0HTY5iVBH2R7wJ7wGidHiiAAHnJB7ClPLcZ7QjKAmjky6HLCVXhq1uWj7dd5a0")`,
+                backgroundImage: `url("/images/heritage-headquarters.jpg")`,
               }}
             >
-              <div className="absolute inset-0 bg-stone-charcoal/20 rounded-xl" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-transform duration-700 group-hover:scale-105" />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-lg shadow-xl max-w-xs">
-              <div className="font-display text-3xl font-bold">25+ Years</div>
-              <div className="font-mono text-xs uppercase tracking-wider text-primary-fixed-dim mt-1">
+            <div className="absolute -bottom-6 -left-4 sm:-left-6 bg-[#0b0f16] border-2 border-[#ea580c] text-white p-6 rounded-xl shadow-2xl max-w-xs">
+              <div className="font-display text-3xl font-black text-[#ea580c]">25+ Years</div>
+              <div className="font-mono text-xs uppercase tracking-wider text-zinc-200 mt-1 font-bold">
                 Licensed California C-8 Specialist #984210
               </div>
             </div>
