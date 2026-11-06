@@ -349,46 +349,49 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
       {/* ======================================================== */}
       {/* 5. FINISH COMPARISON MATRIX */}
       {/* ======================================================== */}
-      <section className="w-full bg-concrete-honed py-20 lg:py-24">
+      <section className="w-full bg-stone-100 py-20 lg:py-24 border-b border-stone-200">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="font-mono text-xs uppercase tracking-wider text-primary font-semibold">
+            <span className="font-mono text-xs uppercase tracking-wider text-[#ea580c] font-black">
               Surface Engineering Specs
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl text-stone-charcoal uppercase tracking-tight font-bold mt-2 mb-4">
+            <h2 className="font-display text-3xl sm:text-4xl text-stone-900 uppercase tracking-tight font-black mt-2 mb-4">
               Concrete Finishes &amp; Applications
             </h2>
-            <p className="font-sans text-sm sm:text-base text-secondary">
+            <p className="font-sans text-sm sm:text-base text-stone-600 font-medium">
               Compare our primary surface methods engineered for durability, friction coefficient, and visual elegance.
             </p>
           </div>
 
-          <div className="overflow-x-auto bg-white shadow-sm border border-stone-200">
+          <div className="overflow-x-auto bg-white rounded-2xl shadow-xl border-2 border-stone-200">
             <table className="w-full text-left font-sans text-xs sm:text-sm border-collapse">
               <thead>
-                <tr className="bg-stone-charcoal text-concrete-sand font-mono text-xs uppercase tracking-wider">
-                  <th className="p-4 lg:p-5">Concrete Finish</th>
-                  <th className="p-4 lg:p-5">Primary Applications</th>
-                  <th className="p-4 lg:p-5">Texture &amp; Slip Resistance</th>
-                  <th className="p-4 lg:p-5">Sealing Requirements</th>
-                  <th className="p-4 lg:p-5">Durability Class</th>
+                <tr className="bg-[#0b0f16] text-white font-mono text-xs uppercase tracking-wider border-b-2 border-stone-800">
+                  <th className="p-4 lg:p-5 font-black">Concrete Finish</th>
+                  <th className="p-4 lg:p-5 font-black">Primary Applications</th>
+                  <th className="p-4 lg:p-5 font-black">Texture &amp; Slip Resistance</th>
+                  <th className="p-4 lg:p-5 font-black">Sealing Requirements</th>
+                  <th className="p-4 lg:p-5 font-black">Durability Class</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-surface-container">
+              <tbody className="divide-y divide-stone-200">
                 {FINISH_SPECIFICATIONS.map((spec, i) => (
-                  <tr key={i} className="hover:bg-concrete-sand/60 transition-colors">
-                    <td className="p-4 lg:p-5 font-display text-stone-charcoal font-bold">
+                  <tr key={i} className="hover:bg-stone-50 transition-colors">
+                    <td className="p-4 lg:p-5 font-display text-stone-900 font-black text-sm sm:text-base">
                       {spec.finishName}
                     </td>
-                    <td className="p-4 lg:p-5 text-secondary">{spec.applications}</td>
-                    <td className="p-4 lg:p-5 text-secondary">
-                      <span className="px-2 py-0.5 bg-surface-container-high font-mono text-[10px] uppercase rounded">
+                    <td className="p-4 lg:p-5 text-stone-700 font-medium">{spec.applications}</td>
+                    <td className="p-4 lg:p-5">
+                      <span className="px-3 py-1 bg-stone-100 text-stone-900 border border-stone-300 font-mono text-[10px] uppercase rounded-full font-bold">
                         {spec.textureSlipResistance}
                       </span>
                     </td>
-                    <td className="p-4 lg:p-5 text-secondary">{spec.sealingRequirements}</td>
-                    <td className="p-4 lg:p-5 text-stone-charcoal font-semibold">
-                      {spec.durabilityClass}
+                    <td className="p-4 lg:p-5 text-stone-600 font-medium">{spec.sealingRequirements}</td>
+                    <td className="p-4 lg:p-5 text-stone-900 font-bold">
+                      <span className="inline-flex items-center gap-1.5 text-stone-900">
+                        <span className="w-2 h-2 rounded-full bg-[#ea580c]" />
+                        {spec.durabilityClass}
+                      </span>
                     </td>
                   </tr>
                 ))}
@@ -475,45 +478,45 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
       <section id="careers-section" className="w-full bg-concrete-sand py-16 lg:py-20 border-t border-stone-300">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
           {/* Synchronized Solid Dark Architectural Card */}
-          <div className="bg-[#0b0f16]/95 border-2 border-white/25 p-8 sm:p-10 lg:p-14 rounded-2xl shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-10 text-white relative">
+          <div className="bg-[#0b0f16] border-2 border-white/30 p-8 sm:p-10 lg:p-14 rounded-2xl shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-10 text-white relative">
             <div className="max-w-2xl space-y-4">
-              {/* Badge with White Text */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-black/80 text-white font-mono text-xs uppercase tracking-wider border border-white/40 rounded-full font-extrabold shadow-md">
-                <span className="w-2.5 h-2.5 bg-surveyor-lime rounded-full shadow-[0_0_8px_#6EF712] animate-pulse" />
-                <span className="text-white font-extrabold tracking-wider">
+              {/* Badge with 100% Bright Crisp White Text */}
+              <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-black/90 text-white font-mono text-xs uppercase tracking-wider border-2 border-white/40 rounded-full font-black shadow-md">
+                <span className="w-2.5 h-2.5 bg-surveyor-lime rounded-full shadow-[0_0_8px_#6EF712]" />
+                <span className="text-white font-black tracking-wider drop-shadow-sm">
                   Join Our Field Crew • Southern California C-8 Certified
                 </span>
               </div>
 
               {/* High-Contrast Crisp White Title */}
-              <h2 className="font-display text-3xl sm:text-4xl uppercase tracking-tight text-white font-black leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)]">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-white font-black leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)]">
                 Career Opportunities in Concrete Construction
               </h2>
 
               {/* 100% Readable Description */}
-              <p className="font-sans text-base sm:text-lg text-white leading-relaxed font-normal drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
+              <p className="font-sans text-base sm:text-lg text-stone-100 leading-relaxed font-normal drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
                 Looking for experienced concrete finishers, form carpenters, and heavy civil equipment operators. We offer top-tier competitive pay, consistent year-round 40+ hours, and safety-certified job sites across Menifee and the Inland Empire.
               </p>
 
               {/* High-visibility benefit chips */}
               <div className="flex flex-wrap gap-2.5 pt-2">
-                <span className="px-3.5 py-1.5 bg-white/10 border border-white/30 text-white font-mono text-xs font-bold rounded-lg flex items-center gap-1.5 shadow-sm">
-                  <span className="text-surveyor-lime font-bold">✓</span> <span className="text-white">$22 – $42 / hr Hourly Pay</span>
+                <span className="px-4 py-2 bg-white/15 border-2 border-white/30 text-white font-mono text-xs font-black rounded-xl flex items-center gap-2 shadow-sm">
+                  <span className="text-surveyor-lime font-black">✓</span> <span className="text-white font-black">$22 – $42 / hr Hourly Pay</span>
                 </span>
-                <span className="px-3.5 py-1.5 bg-white/10 border border-white/30 text-white font-mono text-xs font-bold rounded-lg flex items-center gap-1.5 shadow-sm">
-                  <span className="text-surveyor-lime font-bold">✓</span> <span className="text-white">Year-Round 40+ Hours / Wk</span>
+                <span className="px-4 py-2 bg-white/15 border-2 border-white/30 text-white font-mono text-xs font-black rounded-xl flex items-center gap-2 shadow-sm">
+                  <span className="text-surveyor-lime font-black">✓</span> <span className="text-white font-black">Year-Round 40+ Hours / Wk</span>
                 </span>
-                <span className="px-3.5 py-1.5 bg-white/10 border border-white/30 text-white font-mono text-xs font-bold rounded-lg flex items-center gap-1.5 shadow-sm">
-                  <span className="text-surveyor-lime font-bold">✓</span> <span className="text-white">OSHA Safety Certified</span>
+                <span className="px-4 py-2 bg-white/15 border-2 border-white/30 text-white font-mono text-xs font-black rounded-xl flex items-center gap-2 shadow-sm">
+                  <span className="text-surveyor-lime font-black">✓</span> <span className="text-white font-black">OSHA Safety Certified</span>
                 </span>
               </div>
             </div>
 
-            {/* Action Buttons */}
+            {/* Action Buttons (Perfect Sync with Orange & White Outline System) */}
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto shrink-0">
               <a
                 href={`mailto:${COMPANY_INFO.bidsEmail}?subject=Employment%20Inquiry%20-%20Morning%20Star%20Concrete`}
-                className="w-full sm:w-auto px-8 py-4 bg-surveyor-lime hover:bg-[#5cd40f] text-black font-mono text-xs uppercase tracking-wider font-black text-center transition-all shadow-2xl cursor-pointer border-2 border-surveyor-lime hover:scale-105 inline-block"
+                className="w-full sm:w-auto px-8 py-4 bg-[#ea580c] hover:bg-[#c2410c] text-white font-mono text-xs uppercase tracking-wider font-black text-center transition-all shadow-2xl cursor-pointer border-2 border-transparent hover:scale-105 inline-block"
               >
                 APPLY VIA EMAIL
               </a>
