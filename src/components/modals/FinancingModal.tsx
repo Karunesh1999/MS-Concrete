@@ -42,28 +42,28 @@ export const FinancingModal: React.FC<FinancingModalProps> = ({
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-          <div className="bg-surface-container-high p-4 rounded-lg text-center">
-            <span className="material-symbols-outlined text-primary text-2xl mb-1">speed</span>
-            <div className="font-display text-sm font-bold uppercase text-stone-charcoal">Fast Decisions</div>
-            <div className="font-sans text-xs text-secondary mt-1">Instant digital pre-qualification</div>
+          <div className="bg-stone-50 border border-stone-200 p-4 rounded-lg text-center">
+            <span className="material-symbols-outlined text-[#ea580c] text-2xl mb-1">speed</span>
+            <div className="font-display text-sm font-black uppercase text-stone-900">Fast Decisions</div>
+            <div className="font-sans text-xs text-stone-600 font-medium mt-1">Instant digital pre-qualification</div>
           </div>
-          <div className="bg-surface-container-high p-4 rounded-lg text-center">
-            <span className="material-symbols-outlined text-primary text-2xl mb-1">payments</span>
-            <div className="font-display text-sm font-bold uppercase text-stone-charcoal">Predictable Terms</div>
-            <div className="font-sans text-xs text-secondary mt-1">Convenient monthly payment options</div>
+          <div className="bg-stone-50 border border-stone-200 p-4 rounded-lg text-center">
+            <span className="material-symbols-outlined text-[#ea580c] text-2xl mb-1">payments</span>
+            <div className="font-display text-sm font-black uppercase text-stone-900">Predictable Terms</div>
+            <div className="font-sans text-xs text-stone-600 font-medium mt-1">Convenient monthly payment options</div>
           </div>
-          <div className="bg-surface-container-high p-4 rounded-lg text-center">
-            <span className="material-symbols-outlined text-primary text-2xl mb-1">verified_user</span>
-            <div className="font-display text-sm font-bold uppercase text-stone-charcoal">No Hidden Fees</div>
-            <div className="font-sans text-xs text-secondary mt-1">Clear APR and repayment structure</div>
+          <div className="bg-stone-50 border border-stone-200 p-4 rounded-lg text-center">
+            <span className="material-symbols-outlined text-[#ea580c] text-2xl mb-1">verified_user</span>
+            <div className="font-display text-sm font-black uppercase text-stone-900">No Hidden Fees</div>
+            <div className="font-sans text-xs text-stone-600 font-medium mt-1">Clear APR and repayment structure</div>
           </div>
         </div>
 
-        <div className="bg-stone-charcoal text-white p-5 rounded-lg mb-6">
-          <h4 className="font-mono text-xs uppercase text-surveyor-lime font-bold tracking-wider mb-2">
+        <div className="bg-[#0b0f16] border border-white/20 text-white p-5 rounded-lg mb-6">
+          <h4 className="font-mono text-xs uppercase text-surveyor-lime font-black tracking-wider mb-2">
             Eligible Project Types
           </h4>
-          <ul className="grid grid-cols-2 gap-2 font-sans text-xs text-concrete-sand">
+          <ul className="grid grid-cols-2 gap-2 font-sans text-xs text-stone-200 font-medium">
             <li>• Decorative Patios &amp; Courtyards</li>
             <li>• New Broom Finish Driveways</li>
             <li>• Pool Deck Resurfacing &amp; Pours</li>
@@ -74,9 +74,9 @@ export const FinancingModal: React.FC<FinancingModalProps> = ({
         <div className="pt-4 border-t border-stone-200 flex flex-col sm:flex-row items-center justify-between gap-4">
           <a
             href={`tel:${COMPANY_INFO.phoneRaw}`}
-            className="font-mono text-xs text-primary font-bold hover:underline flex items-center gap-1"
+            className="font-mono text-xs text-stone-900 font-extrabold hover:text-[#ea580c] transition-colors flex items-center gap-1.5"
           >
-            <span className="material-symbols-outlined text-sm">call</span>
+            <span className="material-symbols-outlined text-sm text-[#ea580c]">call</span>
             <span>Call Financing Desk: {COMPANY_INFO.phone}</span>
           </a>
           <button
@@ -84,10 +84,10 @@ export const FinancingModal: React.FC<FinancingModalProps> = ({
               onClose();
               onOpenEstimate();
             }}
-            className="w-full sm:w-auto px-6 py-3 bg-primary text-white hover:bg-stone-charcoal font-mono text-xs uppercase font-bold tracking-wider transition-colors shadow-md flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-6 py-3 bg-[#ea580c] hover:bg-[#c2410c] text-white font-mono text-xs uppercase font-black tracking-wider transition-all shadow-xl flex items-center justify-center gap-2 cursor-pointer hover:scale-105"
           >
             <span>Request Financing Estimate</span>
-            <span className="material-symbols-outlined text-sm">north_east</span>
+            <span className="material-symbols-outlined text-sm font-bold">north_east</span>
           </button>
         </div>
       </div>

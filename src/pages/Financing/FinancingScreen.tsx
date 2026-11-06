@@ -144,13 +144,13 @@ export const FinancingScreen: React.FC<FinancingScreenProps> = ({ onOpenEstimate
               <div className="space-y-3">
                 <button
                   onClick={onOpenEstimate}
-                  className="w-full py-3.5 bg-surveyor-lime text-stone-charcoal font-mono text-xs uppercase font-bold tracking-wider hover:opacity-90 transition-opacity shadow-lg cursor-pointer"
+                  className="w-full py-4 bg-[#ea580c] hover:bg-[#c2410c] text-white font-mono text-xs uppercase font-black tracking-wider transition-all shadow-xl cursor-pointer hover:scale-105"
                 >
                   Apply via Project Estimate
                 </button>
                 <a
                   href={`tel:${COMPANY_INFO.phoneRaw}`}
-                  className="block w-full py-3 border border-white/20 hover:bg-white/10 text-white font-mono text-xs uppercase font-bold tracking-wider transition-colors"
+                  className="block w-full py-3.5 border-2 border-white hover:bg-white hover:text-black text-white font-mono text-xs uppercase font-black tracking-wider transition-all text-center"
                 >
                   Call Financing Desk: {COMPANY_INFO.phone}
                 </a>

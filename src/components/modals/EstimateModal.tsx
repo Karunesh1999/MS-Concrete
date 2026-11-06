@@ -79,7 +79,7 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block font-mono text-xs uppercase tracking-wider text-secondary mb-1.5" htmlFor="modal-name">
+                  <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-bold mb-1.5" htmlFor="modal-name">
                     Full Name *
                   </label>
                   <input
@@ -89,11 +89,11 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     placeholder="John Doe"
-                    className="w-full bg-white px-3.5 py-2.5 font-sans text-sm text-stone-charcoal outline-none focus:ring-2 focus:ring-primary shadow-sm border border-stone-300"
+                    className="w-full bg-white px-3.5 py-2.5 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border border-stone-300 font-medium"
                   />
                 </div>
                 <div>
-                  <label className="block font-mono text-xs uppercase tracking-wider text-secondary mb-1.5" htmlFor="modal-phone">
+                  <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-bold mb-1.5" htmlFor="modal-phone">
                     Phone Number *
                   </label>
                   <input
@@ -103,14 +103,14 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
                     value={formData.phoneNum}
                     onChange={(e) => setFormData({ ...formData, phoneNum: e.target.value })}
                     placeholder="(951) 000-0000"
-                    className="w-full bg-white px-3.5 py-2.5 font-sans text-sm text-stone-charcoal outline-none focus:ring-2 focus:ring-primary shadow-sm border border-stone-300"
+                    className="w-full bg-white px-3.5 py-2.5 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border border-stone-300 font-medium"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block font-mono text-xs uppercase tracking-wider text-secondary mb-1.5" htmlFor="modal-email">
+                  <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-bold mb-1.5" htmlFor="modal-email">
                     Email Address *
                   </label>
                   <input
@@ -120,18 +120,18 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
                     value={formData.emailAddr}
                     onChange={(e) => setFormData({ ...formData, emailAddr: e.target.value })}
                     placeholder="john@example.com"
-                    className="w-full bg-white px-3.5 py-2.5 font-sans text-sm text-stone-charcoal outline-none focus:ring-2 focus:ring-primary shadow-sm border border-stone-300"
+                    className="w-full bg-white px-3.5 py-2.5 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border border-stone-300 font-medium"
                   />
                 </div>
                 <div>
-                  <label className="block font-mono text-xs uppercase tracking-wider text-secondary mb-1.5" htmlFor="modal-type">
+                  <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-bold mb-1.5" htmlFor="modal-type">
                     Project Classification *
                   </label>
                   <select
                     id="modal-type"
                     value={formData.projectType}
                     onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                    className="w-full bg-white px-3.5 py-2.5 font-sans text-sm text-stone-charcoal outline-none focus:ring-2 focus:ring-primary shadow-sm border border-stone-300"
+                    className="w-full bg-white px-3.5 py-2.5 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border border-stone-300 font-medium"
                   >
                     <option value="residential-driveway">Residential Driveway / Sidewalk (Broom Finish)</option>
                     <option value="decorative-stamped">Decorative Stamped Concrete (Color &amp; Seal)</option>
@@ -145,7 +145,7 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
               </div>
 
               <div>
-                <label className="block font-mono text-xs uppercase tracking-wider text-secondary mb-1.5" htmlFor="modal-loc">
+                <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-bold mb-1.5" htmlFor="modal-loc">
                   Site Location (City or Zip Code) *
                 </label>
                 <input
@@ -155,12 +155,12 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
                   value={formData.projectLocation}
                   onChange={(e) => setFormData({ ...formData, projectLocation: e.target.value })}
                   placeholder="e.g. Menifee, Murrieta, Temecula, Riverside"
-                  className="w-full bg-white px-3.5 py-2.5 font-sans text-sm text-stone-charcoal outline-none focus:ring-2 focus:ring-primary shadow-sm border border-stone-300"
+                  className="w-full bg-white px-3.5 py-2.5 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border border-stone-300 font-medium"
                 />
               </div>
 
               <div>
-                <label className="block font-mono text-xs uppercase tracking-wider text-secondary mb-1.5" htmlFor="modal-details">
+                <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-bold mb-1.5" htmlFor="modal-details">
                   Project Dimensions or Specs
                 </label>
                 <textarea
@@ -169,7 +169,7 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
                   value={formData.projectDetails}
                   onChange={(e) => setFormData({ ...formData, projectDetails: e.target.value })}
                   placeholder="Approximate sq ft, required thickness (4'', 6'', 8''), finish type, rebar requirements..."
-                  className="w-full bg-white px-3.5 py-2.5 font-sans text-sm text-stone-charcoal outline-none focus:ring-2 focus:ring-primary shadow-sm border border-stone-300"
+                  className="w-full bg-white px-3.5 py-2.5 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border border-stone-300 font-medium"
                 />
               </div>
 
@@ -179,16 +179,16 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
                   type="checkbox"
                   checked={formData.syncFinancing}
                   onChange={(e) => setFormData({ ...formData, syncFinancing: e.target.checked })}
-                  className="w-4 h-4 text-primary accent-primary"
+                  className="w-4 h-4 text-[#ea580c] accent-[#ea580c]"
                 />
-                <label htmlFor="modal-sync" className="font-sans text-xs text-secondary cursor-pointer">
+                <label htmlFor="modal-sync" className="font-sans text-xs text-stone-800 font-medium cursor-pointer">
                   I am interested in flexible Synchrony Bank financing options.
                 </label>
               </div>
 
               <button
                 type="submit"
-                className="w-full mt-4 py-3.5 bg-primary text-white font-mono text-xs uppercase tracking-wider font-bold hover:bg-stone-charcoal transition-colors shadow-lg cursor-pointer"
+                className="w-full mt-4 py-3.5 bg-[#ea580c] hover:bg-[#c2410c] text-white font-mono text-xs uppercase tracking-wider font-black transition-all shadow-xl cursor-pointer hover:scale-[1.01]"
               >
                 Submit Estimate Request
               </button>

@@ -109,7 +109,7 @@ export const AboutScreen: React.FC<AboutScreenProps> = ({ onOpenEstimate }) => {
           <div className="mt-10 pt-8 border-t border-stone-300 text-center">
             <button
               onClick={onOpenEstimate}
-              className="px-8 py-3.5 bg-primary text-white font-mono text-xs uppercase font-bold tracking-wider hover:bg-stone-charcoal transition-colors shadow-lg cursor-pointer"
+              className="px-8 py-4 bg-[#ea580c] hover:bg-[#c2410c] text-white font-mono text-xs uppercase font-black tracking-wider transition-all shadow-xl cursor-pointer hover:scale-105"
             >
               Discuss Your Project With {COMPANY_INFO.shortName}
             </button>

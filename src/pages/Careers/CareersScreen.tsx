@@ -149,7 +149,7 @@ export const CareersScreen: React.FC = () => {
               <a
                 href="#apply-form"
                 onClick={() => setApplicantData(prev => ({ ...prev, position: job.id }))}
-                className="w-full py-2.5 bg-stone-charcoal hover:bg-primary text-white font-mono text-xs uppercase tracking-wider font-bold text-center rounded transition-colors"
+                className="w-full py-2.5 bg-[#ea580c] hover:bg-[#c2410c] text-white font-mono text-xs uppercase tracking-wider font-extrabold text-center rounded transition-all shadow-md block cursor-pointer"
               >
                 Apply for this Role
               </a>
@@ -294,7 +294,7 @@ export const CareersScreen: React.FC = () => {
 
               <button
                 type="submit"
-                className="w-full py-4 bg-primary text-white font-mono text-xs uppercase tracking-wider font-bold hover:bg-stone-charcoal transition-colors shadow-lg cursor-pointer"
+                className="w-full py-4 bg-[#ea580c] hover:bg-[#c2410c] text-white font-mono text-xs uppercase tracking-wider font-black transition-all shadow-xl cursor-pointer hover:scale-[1.01]"
               >
                 Submit Application for Review
               </button>

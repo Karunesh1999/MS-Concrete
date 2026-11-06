@@ -288,7 +288,7 @@ export const ContactScreen: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full py-4 bg-primary text-white font-mono text-xs uppercase tracking-wider font-bold hover:bg-stone-charcoal transition-colors shadow-lg cursor-pointer"
+                  className="w-full py-4 bg-[#ea580c] hover:bg-[#c2410c] text-white font-mono text-xs uppercase tracking-wider font-black transition-all shadow-xl cursor-pointer hover:scale-[1.01]"
                 >
                   Request Official Project Estimate
                 </button>

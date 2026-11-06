@@ -145,7 +145,7 @@ export const ServicesScreen: React.FC<ServicesScreenProps> = ({ onOpenEstimate }
 
               <button
                 onClick={() => onOpenEstimate(service.type)}
-                className="w-full py-2.5 bg-surface-container hover:bg-stone-charcoal hover:text-white text-stone-charcoal font-mono text-[11px] uppercase tracking-wider font-bold transition-colors rounded cursor-pointer"
+                className="w-full py-2.5 bg-stone-100 hover:bg-[#ea580c] hover:text-white text-stone-900 border border-stone-300 font-mono text-[11px] uppercase tracking-wider font-extrabold transition-all rounded cursor-pointer shadow-sm hover:border-[#ea580c]"
               >
                 Request Quote
               </button>

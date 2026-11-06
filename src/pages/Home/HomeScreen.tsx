@@ -93,18 +93,18 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               Delivering structural integrity, architectural stamping, and engineered foundations across Southern California for over a quarter century.
             </p>
 
-            {/* Action Buttons */}
+            {/* Action Buttons (Synchronized High-Contrast Palette) */}
             <div className="flex flex-wrap items-center justify-center gap-4 mt-2">
               <button
                 onClick={() => onOpenEstimate()}
-                className="inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-primary-container text-white font-mono text-xs uppercase tracking-wider font-extrabold transition-all shadow-xl cursor-pointer border border-white/20 hover:scale-105"
+                className="inline-flex items-center justify-center px-8 py-4 bg-[#ea580c] hover:bg-[#c2410c] text-white font-mono text-xs uppercase tracking-wider font-black transition-all shadow-xl cursor-pointer border-2 border-transparent hover:scale-105"
               >
                 REQUEST A FREE ESTIMATE
               </button>
               
               <a
                 href="#services-matrix"
-                className="inline-flex items-center justify-center px-8 py-4 bg-black/50 hover:bg-white hover:text-stone-900 border border-white/60 text-white font-mono text-xs tracking-widest uppercase transition-all shadow-lg font-bold backdrop-blur-sm"
+                className="inline-flex items-center justify-center px-8 py-4 bg-transparent hover:bg-white hover:text-black border-2 border-white text-white font-mono text-xs tracking-widest uppercase transition-all shadow-lg font-black hover:scale-105"
               >
                 EXPLORE PROJECT MATRIX
               </a>
@@ -582,11 +582,11 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               <form onSubmit={handleInlineSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block font-mono text-xs uppercase tracking-wider text-secondary mb-2" htmlFor="fullName">
+                    <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-bold mb-2" htmlFor="fullName">
                       Full Name *
                     </label>
                     <input
-                      className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-charcoal outline-none focus:ring-2 focus:ring-primary shadow-sm border border-stone-300"
+                      className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border border-stone-300 font-medium"
                       id="fullName"
                       placeholder="John Doe"
                       required
@@ -596,11 +596,11 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                     />
                   </div>
                   <div>
-                    <label className="block font-mono text-xs uppercase tracking-wider text-secondary mb-2" htmlFor="phoneNum">
+                    <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-bold mb-2" htmlFor="phoneNum">
                       Phone Number *
                     </label>
                     <input
-                      className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-charcoal outline-none focus:ring-2 focus:ring-primary shadow-sm border border-stone-300"
+                      className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border border-stone-300 font-medium"
                       id="phoneNum"
                       placeholder="(951) 000-0000"
                       required
@@ -613,11 +613,11 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block font-mono text-xs uppercase tracking-wider text-secondary mb-2" htmlFor="emailAddr">
+                    <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-bold mb-2" htmlFor="emailAddr">
                       Email Address *
                     </label>
                     <input
-                      className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-charcoal outline-none focus:ring-2 focus:ring-primary shadow-sm border border-stone-300"
+                      className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border border-stone-300 font-medium"
                       id="emailAddr"
                       placeholder="john@example.com"
                       required
@@ -627,11 +627,11 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                     />
                   </div>
                   <div>
-                    <label className="block font-mono text-xs uppercase tracking-wider text-secondary mb-2" htmlFor="projectType">
+                    <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-bold mb-2" htmlFor="projectType">
                       Project Scope / Classification *
                     </label>
                     <select
-                      className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-charcoal outline-none focus:ring-2 focus:ring-primary shadow-sm border border-stone-300"
+                      className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border border-stone-300 font-medium"
                       id="projectType"
                       value={inlineEstimateData.projectType}
                       onChange={(e) => setInlineEstimateData({ ...inlineEstimateData, projectType: e.target.value })}
@@ -648,11 +648,11 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                 </div>
 
                 <div>
-                  <label className="block font-mono text-xs uppercase tracking-wider text-secondary mb-2" htmlFor="projectLocation">
+                  <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-bold mb-2" htmlFor="projectLocation">
                     Site Location (City or Zip Code) *
                   </label>
                   <input
-                    className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-charcoal outline-none focus:ring-2 focus:ring-primary shadow-sm border border-stone-300"
+                    className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border border-stone-300 font-medium"
                     id="projectLocation"
                     placeholder="e.g. Menifee, Murrieta, Temecula, Riverside"
                     required
@@ -663,11 +663,11 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                 </div>
 
                 <div>
-                  <label className="block font-mono text-xs uppercase tracking-wider text-secondary mb-2" htmlFor="projectDetails">
+                  <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-bold mb-2" htmlFor="projectDetails">
                     Project Dimensions or Specifications
                   </label>
                   <textarea
-                    className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-charcoal outline-none focus:ring-2 focus:ring-primary shadow-sm border border-stone-300"
+                    className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border border-stone-300 font-medium"
                     id="projectDetails"
                     placeholder="Approximate square footage, desired thickness (4'', 6'', 8''), finish type, and any structural requirements..."
                     rows={4}
@@ -678,19 +678,19 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
                 <div className="flex items-center gap-3">
                   <input
-                    className="w-4 h-4 text-primary accent-primary cursor-pointer"
+                    className="w-4 h-4 text-[#ea580c] accent-[#ea580c] cursor-pointer"
                     id="syncFinancing"
                     type="checkbox"
                     checked={inlineEstimateData.syncFinancing}
                     onChange={(e) => setInlineEstimateData({ ...inlineEstimateData, syncFinancing: e.target.checked })}
                   />
-                  <label className="font-sans text-xs text-secondary cursor-pointer" htmlFor="syncFinancing">
+                  <label className="font-sans text-xs text-stone-800 font-medium cursor-pointer" htmlFor="syncFinancing">
                     I am interested in exploring flexible financing options with Synchrony Bank.
                   </label>
                 </div>
 
                 <button
-                  className="w-full py-4 bg-primary text-white font-mono text-xs uppercase tracking-wider font-bold hover:bg-stone-charcoal transition-colors shadow-lg cursor-pointer"
+                  className="w-full py-4 bg-[#ea580c] hover:bg-[#c2410c] text-white font-mono text-xs uppercase tracking-wider font-black transition-all shadow-xl cursor-pointer hover:scale-[1.01]"
                   type="submit"
                 >
                   Submit Estimate Request

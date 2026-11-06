@@ -28,15 +28,15 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <header className="fixed top-0 w-full z-50 bg-[#0b0f14]/85 backdrop-blur-sm border-b border-white/15 transition-all">
       {/* Micro Top Strip: crisp contrast & clear text */}
-      <div className="border-b border-white/10 bg-black/60 text-zinc-300">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 h-8 flex items-center justify-between font-mono text-[11px] tracking-widest uppercase">
+      <div className="border-b border-white/10 bg-black/60 text-white">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 h-7 flex items-center justify-between font-mono text-[11px] tracking-widest uppercase">
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-surveyor-lime rounded-full shadow-sm" />
-              <span className="text-white font-semibold">Lic. #984210</span>
+              <span className="w-2 h-2 bg-surveyor-lime rounded-full shadow-[0_0_6px_#6EF712]" />
+              <span className="text-white font-bold">Lic. #{COMPANY_INFO.license.replace('CSLB #', '')}</span>
             </span>
             <span className="text-white/30">/</span>
-            <span className="hidden sm:inline-block text-zinc-200 font-medium">Menifee, CA &amp; Inland Empire</span>
+            <span className="hidden sm:inline-block text-zinc-200 font-semibold">Menifee, CA &amp; Inland Empire</span>
           </div>
           <div className="flex items-center gap-4">
             <a
@@ -46,10 +46,11 @@ export const Navbar: React.FC<NavbarProps> = ({
               <span className="text-surveyor-lime font-mono">TEL:</span> {COMPANY_INFO.phone}
             </a>
             <span className="hidden md:inline-block text-white/30">/</span>
-            <span className="hidden md:inline-block text-zinc-200 font-medium">Commercial &amp; Civil Division</span>
+            <span className="hidden md:inline-block text-zinc-300 font-medium">Commercial &amp; Civil Division</span>
           </div>
         </div>
       </div>
+
 
       {/* Main Architectural Navbar */}
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 h-16 lg:h-20 flex items-center justify-between gap-6">
@@ -72,11 +73,10 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button
                 key={link.target}
                 onClick={() => onNavigate(link.target)}
-                className={`py-1.5 transition-all cursor-pointer relative ${
-                  isActive
+                className={`py-1.5 transition-all cursor-pointer relative ${isActive
                     ? 'text-surveyor-lime border-b-2 border-surveyor-lime font-extrabold'
                     : 'text-zinc-100 hover:text-white hover:border-b-2 hover:border-white/50'
-                }`}
+                  }`}
               >
                 {link.label}
               </button>
@@ -84,11 +84,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           })}
         </nav>
 
-        {/* Right Actions: High contrast CTA button + mobile menu */}
+        {/* Right Actions: Signature Orange CTA button + mobile menu */}
         <div className="flex items-center gap-3 shrink-0">
           <button
             onClick={onOpenEstimate}
-            className="inline-flex items-center justify-center gap-2 px-5 lg:px-7 py-3 bg-primary hover:bg-primary-container text-white font-mono text-xs uppercase font-extrabold tracking-[0.18em] transition-all shadow-lg cursor-pointer border border-white/20 hover:scale-[1.02]"
+            className="inline-flex items-center justify-center gap-2 px-5 lg:px-7 py-3 bg-[#ea580c] hover:bg-[#c2410c] text-white font-mono text-xs uppercase font-extrabold tracking-[0.18em] transition-all shadow-lg cursor-pointer border border-white/20 hover:scale-105"
           >
             <span>Request Estimate</span>
             <span className="material-symbols-outlined text-sm font-bold leading-none">north_east</span>
