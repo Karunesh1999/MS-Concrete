@@ -286,7 +286,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
         id="financing-section"
         className="relative w-full overflow-hidden py-16 lg:py-20 bg-cover bg-center border-y border-white/10"
         style={{
-          backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuDS4Y827BdzsmP3Y5l27UF2tfyuoTkmWGgz_rtWrFAL-Mw_gON714hqpwEwhMUSOsW6xDki2cTbTgEOlBaBbv0gaI1BHwtHySdDkZx88AfA7vi8TFwzuz15bQ8yxzpB4tmVfUNIn4VUMP5F2FfK1F4IO4QrRXbVrVW6LK_nq1Xi9YEvMtY2W8l9ZNKsTE8FpABLIdgg1kS6MlBFti82UUSMp_oks_QdmUTkF_oBLBA")`,
+          backgroundImage: `url("/images/bay-decorative.jpg")`,
         }}
       >
         {/* Crystal clear dark vignette scrim (Zero blur / Zero fog) */}
@@ -537,9 +537,9 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
       {/* ======================================================== */}
       <section
         id="estimate-form"
-        className="w-full bg-stone-charcoal text-white py-20 lg:py-28 relative"
+        className="w-full bg-[#0b0f16] text-white py-20 lg:py-28 relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(18, 22, 28, 0.88), rgba(18, 22, 28, 0.94)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmGNnCQqMWoWuoT2Y42jBiVoLsy54SfCzcz1CJc0YeddDcxNWT-4YNFz3E8lUEkp26nFbe2NAn4dvmajwbzAiKRfrtdG5G1OuswlZYuFjGuTZha9zOeEeZGXtNrwhuZ63drNAtqUibbkfAYbVEtbv0AzlbSMl3j6PYITvzCORW_cK3NEAI9ZeW9iN-g-8VqEC9wm621iFx9sQgRWTN1e2hUNpyrVU2d22gnkbtWUo")`,
+          backgroundImage: `linear-gradient(rgba(11, 15, 22, 0.92), rgba(11, 15, 22, 0.96)), url("/images/bay-structural.jpg")`,
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
@@ -608,20 +608,29 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                 </div>
               </div>
 
-              <div className="pt-8 mt-8 bg-rebar-steel/30 p-4 border border-white/5">
-                <span className="font-mono text-xs text-concrete-aggregate uppercase block">
-                  California Contractor State License Board
-                </span>
-                <span className="font-sans text-sm text-white font-semibold block mt-0.5">
-                  Classification C-8: Concrete Specialist #984210
-                </span>
+              {/* High-Contrast CSLB License Verification Card */}
+              <div className="mt-8 p-5 bg-black/90 border-2 border-white/20 rounded-2xl shadow-2xl flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-[#ea580c] flex items-center justify-center text-white shrink-0 shadow-lg">
+                  <span className="material-symbols-outlined text-2xl font-bold">verified</span>
+                </div>
+                <div>
+                  <span className="font-mono text-[11px] text-surveyor-lime font-black tracking-wider uppercase block">
+                    California State License Board (CSLB)
+                  </span>
+                  <span className="font-display text-sm sm:text-base text-white font-black block mt-0.5">
+                    Classification C-8: Concrete Specialist #984210
+                  </span>
+                  <span className="font-mono text-[11px] text-zinc-300 font-medium block mt-0.5">
+                    $5,000,000 Aggregate Bonded &amp; Insured • Menifee Headquarters
+                  </span>
+                </div>
               </div>
             </div>
 
-            {/* Interactive Estimate Input Form */}
-            <div className="lg:col-span-7 bg-concrete-sand p-8 lg:p-12 text-stone-charcoal shadow-2xl">
+            {/* Interactive Estimate Input Form (Architectural High-Contrast Card) */}
+            <div className="lg:col-span-7 bg-[#0b0f16]/95 border-2 border-white/25 p-8 sm:p-10 lg:p-12 text-white shadow-2xl rounded-2xl">
               {formAlert && (
-                <div className="mb-6 p-4 bg-primary text-white font-sans text-sm font-semibold rounded shadow">
+                <div className="mb-6 p-4 bg-[#ea580c] text-white font-sans text-sm font-black rounded-lg shadow-lg">
                   ✓ {formAlert}
                 </div>
               )}
@@ -629,11 +638,11 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               <form onSubmit={handleInlineSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-bold mb-2" htmlFor="fullName">
+                    <label className="block font-mono text-xs uppercase tracking-wider text-white font-black mb-2 drop-shadow-sm" htmlFor="fullName">
                       Full Name *
                     </label>
                     <input
-                      className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border border-stone-300 font-medium"
+                      className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border-2 border-stone-300 font-bold rounded-lg placeholder-stone-500"
                       id="fullName"
                       placeholder="John Doe"
                       required
@@ -643,11 +652,11 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                     />
                   </div>
                   <div>
-                    <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-bold mb-2" htmlFor="phoneNum">
+                    <label className="block font-mono text-xs uppercase tracking-wider text-white font-black mb-2 drop-shadow-sm" htmlFor="phoneNum">
                       Phone Number *
                     </label>
                     <input
-                      className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border border-stone-300 font-medium"
+                      className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border-2 border-stone-300 font-bold rounded-lg placeholder-stone-500"
                       id="phoneNum"
                       placeholder="(951) 000-0000"
                       required
@@ -660,11 +669,11 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-bold mb-2" htmlFor="emailAddr">
+                    <label className="block font-mono text-xs uppercase tracking-wider text-white font-black mb-2 drop-shadow-sm" htmlFor="emailAddr">
                       Email Address *
                     </label>
                     <input
-                      className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border border-stone-300 font-medium"
+                      className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border-2 border-stone-300 font-bold rounded-lg placeholder-stone-500"
                       id="emailAddr"
                       placeholder="john@example.com"
                       required
@@ -674,11 +683,11 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                     />
                   </div>
                   <div>
-                    <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-bold mb-2" htmlFor="projectType">
+                    <label className="block font-mono text-xs uppercase tracking-wider text-white font-black mb-2 drop-shadow-sm" htmlFor="projectType">
                       Project Scope / Classification *
                     </label>
                     <select
-                      className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border border-stone-300 font-medium"
+                      className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border-2 border-stone-300 font-bold rounded-lg cursor-pointer"
                       id="projectType"
                       value={inlineEstimateData.projectType}
                       onChange={(e) => setInlineEstimateData({ ...inlineEstimateData, projectType: e.target.value })}
@@ -695,11 +704,11 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                 </div>
 
                 <div>
-                  <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-bold mb-2" htmlFor="projectLocation">
+                  <label className="block font-mono text-xs uppercase tracking-wider text-white font-black mb-2 drop-shadow-sm" htmlFor="projectLocation">
                     Site Location (City or Zip Code) *
                   </label>
                   <input
-                    className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border border-stone-300 font-medium"
+                    className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border-2 border-stone-300 font-bold rounded-lg placeholder-stone-500"
                     id="projectLocation"
                     placeholder="e.g. Menifee, Murrieta, Temecula, Riverside"
                     required
@@ -710,11 +719,11 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                 </div>
 
                 <div>
-                  <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-bold mb-2" htmlFor="projectDetails">
+                  <label className="block font-mono text-xs uppercase tracking-wider text-white font-black mb-2 drop-shadow-sm" htmlFor="projectDetails">
                     Project Dimensions or Specifications
                   </label>
                   <textarea
-                    className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border border-stone-300 font-medium"
+                    className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border-2 border-stone-300 font-medium rounded-lg placeholder-stone-500"
                     id="projectDetails"
                     placeholder="Approximate square footage, desired thickness (4'', 6'', 8''), finish type, and any structural requirements..."
                     rows={4}
@@ -723,21 +732,21 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                   />
                 </div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 pt-1">
                   <input
-                    className="w-4 h-4 text-[#ea580c] accent-[#ea580c] cursor-pointer"
+                    className="w-5 h-5 text-[#ea580c] accent-[#ea580c] cursor-pointer rounded"
                     id="syncFinancing"
                     type="checkbox"
                     checked={inlineEstimateData.syncFinancing}
                     onChange={(e) => setInlineEstimateData({ ...inlineEstimateData, syncFinancing: e.target.checked })}
                   />
-                  <label className="font-sans text-xs text-stone-800 font-medium cursor-pointer" htmlFor="syncFinancing">
+                  <label className="font-sans text-xs sm:text-sm text-white font-bold cursor-pointer drop-shadow-sm" htmlFor="syncFinancing">
                     I am interested in exploring flexible financing options with Synchrony Bank.
                   </label>
                 </div>
 
                 <button
-                  className="w-full py-4 bg-[#ea580c] hover:bg-[#c2410c] text-white font-mono text-xs uppercase tracking-wider font-black transition-all shadow-xl cursor-pointer hover:scale-[1.01]"
+                  className="w-full py-4 bg-[#ea580c] hover:bg-[#c2410c] text-white font-mono text-xs uppercase tracking-wider font-black transition-all shadow-2xl cursor-pointer hover:scale-[1.01] rounded-lg"
                   type="submit"
                 >
                   Submit Estimate Request
