@@ -19,7 +19,7 @@ export const PortfolioScreen: React.FC<PortfolioScreenProps> = ({ onOpenEstimate
       category: 'Decorative',
       location: 'Temecula Wine Country, CA',
       specs: 'Ashlar Slate stamping with Charcoal antique wash and protective matte urethane coat',
-      imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD_ogrxj7bkk0opth9HP4RyuYXE8WwCGvg_Oo0zNJeIcZngzYaNWOLm7G2RYROhHmmtVzZAI0SDQwkyLOEQcNx6-o9ZgM6rfF4W0lW5QIqevmH4mMzNZg3GiDxlRsO_CzVKxkYD2Ghn3rwHMqRfB06989tL7E4msO66-Bl2EkFrfH4JyHd2_9Lw9QBnlCjY7VajoUKOz0uS-OE5fviOfkGybNAv7PlefryFxhwNoEQ',
+      imageUrl: '/images/portfolio-decorative.jpg',
     },
     {
       id: 'proj-5',
@@ -27,7 +27,7 @@ export const PortfolioScreen: React.FC<PortfolioScreenProps> = ({ onOpenEstimate
       category: 'Structural',
       location: 'Riverside Industrial Corridor',
       specs: '8-inch 5,000 PSI slab with double rebar grid and hard-troweled densified finish',
-      imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCepbAk4YDiu-W7dS2GmMLicPMQYzlpVHW-9BvEN1t3-kY70r3iiL9dfIJ-hORl-BU_5xZd3bwJp6pQsEFH3ndPWBYYmIfND49KaqhZM3B7JBGtlJarIgJozzsPVHBcSup17hlB0qEj5QYSVR-2ZWKXKx2KZTiGHaP4xJ2Dkb_2s0HTY5iVBH2R7wJ7wGidHiiAAHnJB7ClPLcZ7QjKAmjky6HLCVXhq1uWj7dd5a0',
+      imageUrl: '/images/portfolio-structural.jpg',
     },
     {
       id: 'proj-6',
@@ -35,7 +35,7 @@ export const PortfolioScreen: React.FC<PortfolioScreenProps> = ({ onOpenEstimate
       category: 'Civil',
       location: 'City of Menifee Infrastructure',
       specs: 'Class A Caltrans mix design, expansion joints at 10-foot intervals, broom finish',
-      imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAv-2cIoCY7c_jBotAjA1K4RVjFrGNz2g4MVx56v9sccjzKAamZZI-rhni7En2T4uvC2pPUESqyYZSIfVbDptYZ0H4HXULI5uRClfQm-NlvVKW2UlTAdo8SX6FSxlvgzpBoMX81D8eGKMbniplTuW-UCJT94h-wzFDlCtOAWE2xerNVb3wC2YHXzWDnu1P5CvEvRkctDkNjVuNstNPCJJsSP8NAWJ1xLm-Hjxt8j5w',
+      imageUrl: '/images/portfolio-civil.jpg',
     },
   ];
 
@@ -53,21 +53,24 @@ export const PortfolioScreen: React.FC<PortfolioScreenProps> = ({ onOpenEstimate
           centered
         />
 
-        {/* Filter buttons */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-          {(['All', 'Structural', 'Decorative', 'Civil'] as const).map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setSelectedCategory(cat)}
-              className={`px-5 py-2.5 font-mono text-xs uppercase tracking-wider font-bold transition-all rounded-full cursor-pointer ${
-                selectedCategory === cat
-                  ? 'bg-stone-charcoal text-white shadow-lg'
-                  : 'bg-white text-secondary hover:bg-stone-200 border border-stone-300'
-              }`}
-            >
-              {cat} Projects
-            </button>
-          ))}
+        {/* Filter buttons: High-contrast architectural filter pills */}
+        <div className="flex flex-wrap items-center justify-center gap-2.5 p-1.5 bg-stone-100 border-2 border-stone-300 rounded-full shadow-inner max-w-fit mx-auto mb-12">
+          {(['All', 'Structural', 'Decorative', 'Civil'] as const).map((cat) => {
+            const isActive = selectedCategory === cat;
+            return (
+              <button
+                key={cat}
+                onClick={() => setSelectedCategory(cat)}
+                className={`px-6 py-2.5 font-mono text-xs uppercase tracking-wider font-black transition-all rounded-full cursor-pointer ${
+                  isActive
+                    ? 'bg-[#0b0f16] text-white shadow-md border-2 border-[#0b0f16]'
+                    : 'bg-white text-stone-800 hover:text-black hover:bg-stone-200 border-2 border-transparent'
+                }`}
+              >
+                {cat} Projects
+              </button>
+            );
+          })}
         </div>
 
         {/* Gallery Grid */}
@@ -92,17 +95,17 @@ export const PortfolioScreen: React.FC<PortfolioScreenProps> = ({ onOpenEstimate
 
               <div className="p-6 flex-grow flex flex-col justify-between">
                 <div>
-                  <h4 className="font-display text-base font-bold uppercase tracking-tight text-stone-charcoal mb-2">
+                  <h4 className="font-display text-lg font-black uppercase tracking-tight text-stone-900 mb-2">
                     {project.title}
                   </h4>
-                  <p className="font-sans text-xs text-secondary leading-relaxed">
+                  <p className="font-sans text-xs sm:text-sm text-stone-600 leading-relaxed font-medium">
                     {project.specs}
                   </p>
                 </div>
 
-                <div className="pt-4 mt-4 border-t border-stone-100 flex items-center justify-between text-primary font-mono text-xs font-bold uppercase">
+                <div className="pt-4 mt-4 border-t border-stone-100 flex items-center justify-between text-[#ea580c] font-mono text-xs font-black uppercase">
                   <span>View Details</span>
-                  <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
+                  <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform font-bold">
                     arrow_forward
                   </span>
                 </div>
@@ -112,16 +115,16 @@ export const PortfolioScreen: React.FC<PortfolioScreenProps> = ({ onOpenEstimate
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center bg-stone-charcoal text-white p-8 sm:p-12 rounded-xl shadow-xl">
-          <h3 className="font-display text-2xl font-bold uppercase tracking-tight mb-3">
+        <div className="text-center bg-[#0b0f16] border-2 border-white/20 text-white p-8 sm:p-12 rounded-2xl shadow-2xl">
+          <h3 className="font-display text-2xl sm:text-3xl font-black uppercase tracking-tight mb-3 text-white">
             Have a Specific Project in Mind?
           </h3>
-          <p className="font-sans text-sm text-concrete-aggregate max-w-xl mx-auto mb-6">
+          <p className="font-sans text-sm text-zinc-300 max-w-xl mx-auto mb-6 font-medium">
             We review site blueprints, municipal civil drawings, and residential concepts within 24 hours.
           </p>
           <button
             onClick={() => onOpenEstimate()}
-            className="px-8 py-3.5 bg-primary-container text-white font-mono text-xs uppercase font-bold tracking-wider hover:bg-white hover:text-stone-charcoal transition-colors shadow-lg cursor-pointer"
+            className="px-8 py-4 bg-[#ea580c] hover:bg-[#c2410c] text-white font-mono text-xs uppercase font-black tracking-wider transition-all shadow-xl cursor-pointer hover:scale-105"
           >
             Submit Blueprints for Review
           </button>

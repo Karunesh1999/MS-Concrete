@@ -365,31 +365,34 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <span className="w-1.5 h-5 bg-primary" />
-                <span className="font-mono text-xs uppercase tracking-wider text-secondary font-semibold">
+                <span className="w-1.5 h-5 bg-[#ea580c]" />
+                <span className="font-mono text-xs uppercase tracking-wider text-stone-700 font-extrabold">
                   Field Gallery
                 </span>
               </div>
-              <h2 className="font-display text-3xl sm:text-4xl text-stone-charcoal uppercase tracking-tight font-bold">
+              <h2 className="font-display text-3xl sm:text-4xl text-stone-900 uppercase tracking-tight font-black">
                 Featured Concrete Projects
               </h2>
             </div>
             
-            {/* Category tabs */}
-            <div className="flex flex-wrap gap-2">
-              {(['All', 'Structural', 'Decorative', 'Civil'] as const).map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setPortfolioCategory(cat)}
-                  className={`px-4 py-2 font-mono text-xs uppercase tracking-wider font-semibold transition-all cursor-pointer rounded-full ${
-                    portfolioCategory === cat
-                      ? 'bg-stone-charcoal text-white shadow-md'
-                      : 'bg-surface-container text-secondary hover:bg-stone-200'
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
+            {/* Category tabs: High-contrast architectural filter pills */}
+            <div className="flex flex-wrap items-center gap-2.5 p-1.5 bg-stone-100 border-2 border-stone-300 rounded-full shadow-inner">
+              {(['All', 'Structural', 'Decorative', 'Civil'] as const).map((cat) => {
+                const isActive = portfolioCategory === cat;
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => setPortfolioCategory(cat)}
+                    className={`px-5 py-2 font-mono text-xs uppercase tracking-wider font-black transition-all cursor-pointer rounded-full ${
+                      isActive
+                        ? 'bg-[#0b0f16] text-white shadow-md border-2 border-[#0b0f16]'
+                        : 'bg-white text-stone-800 hover:text-black hover:bg-stone-200 border-2 border-transparent'
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                );
+              })}
             </div>
           </div>
 
@@ -397,25 +400,25 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                className="group relative bg-stone-charcoal overflow-hidden shadow-lg border border-stone-200 rounded-xl"
+                className="group relative bg-[#0b0f16] overflow-hidden shadow-xl border-2 border-stone-200 hover:border-stone-400 rounded-2xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div
-                  className="h-72 w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                  className="h-80 w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                   style={{ backgroundImage: `url("${project.imageUrl}")` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-charcoal/95 via-stone-charcoal/40 to-transparent p-6 flex flex-col justify-end text-white">
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="font-mono text-[10px] uppercase text-surveyor-lime font-bold tracking-wider">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-transparent p-6 flex flex-col justify-end text-white">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-mono text-[10px] uppercase text-surveyor-lime font-black tracking-wider px-2.5 py-0.5 bg-black/75 rounded-full border border-surveyor-lime/40">
                       {project.category}
                     </span>
-                    <span className="font-mono text-[10px] text-concrete-aggregate">
+                    <span className="font-mono text-[11px] text-zinc-300 font-bold bg-black/60 px-2 py-0.5 rounded">
                       {project.location}
                     </span>
                   </div>
-                  <h3 className="font-display text-lg font-bold uppercase tracking-tight mb-2">
+                  <h3 className="font-display text-lg sm:text-xl font-black uppercase tracking-tight mb-2 text-white drop-shadow-md">
                     {project.title}
                   </h3>
-                  <p className="font-sans text-xs text-concrete-aggregate line-clamp-2">
+                  <p className="font-sans text-xs text-zinc-200 line-clamp-2 font-medium">
                     {project.specs}
                   </p>
                 </div>

@@ -101,7 +101,7 @@ export const PORTFOLIO_PROJECTS: ProjectPortfolioItem[] = [
     category: 'Structural',
     location: 'Inland Empire, CA',
     specs: '6,000 PSI High-Early Strength, Laser Screed Trowel',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCepbAk4YDiu-W7dS2GmMLicPMQYzlpVHW-9BvEN1t3-kY70r3iiL9dfIJ-hORl-BU_5xZd3bwJp6pQsEFH3ndPWBYYmIfND49KaqhZM3B7JBGtlJarIgJozzsPVHBcSup17hlB0qEj5QYSVR-2ZWKXKx2KZTiGHaP4xJ2Dkb_2s0HTY5iVBH2R7wJ7wGidHiiAAHnJB7ClPLcZ7QjKAmjky6HLCVXhq1uWj7dd5a0',
+    imageUrl: '/images/portfolio-structural.jpg',
   },
   {
     id: 'proj-2',
@@ -109,7 +109,7 @@ export const PORTFOLIO_PROJECTS: ProjectPortfolioItem[] = [
     category: 'Decorative',
     location: 'Menifee, CA',
     specs: 'Integral Warm Sand Dune pigment with Deep Charcoal Antique release',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD_ogrxj7bkk0opth9HP4RyuYXE8WwCGvg_Oo0zNJeIcZngzYaNWOLm7G2RYROhHmmtVzZAI0SDQwkyLOEQcNx6-o9ZgM6rfF4W0lW5QIqevmH4mMzNZg3GiDxlRsO_CzVKxkYD2Ghn3rwHMqRfB06989tL7E4msO66-Bl2EkFrfH4JyHd2_9Lw9QBnlCjY7VajoUKOz0uS-OE5fviOfkGybNAv7PlefryFxhwNoEQ',
+    imageUrl: '/images/portfolio-decorative.jpg',
   },
   {
     id: 'proj-3',
@@ -117,7 +117,7 @@ export const PORTFOLIO_PROJECTS: ProjectPortfolioItem[] = [
     category: 'Civil',
     location: 'Murrieta, CA',
     specs: 'Seismic #6 Rebar Caging with integrated geogrid drainage',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAv-2cIoCY7c_jBotAjA1K4RVjFrGNz2g4MVx56v9sccjzKAamZZI-rhni7En2T4uvC2pPUESqyYZSIfVbDptYZ0H4HXULI5uRClfQm-NlvVKW2UlTAdo8SX6FSxlvgzpBoMX81D8eGKMbniplTuW-UCJT94h-wzFDlCtOAWE2xerNVb3wC2YHXzWDnu1P5CvEvRkctDkNjVuNstNPCJJsSP8NAWJ1xLm-Hjxt8j5w',
+    imageUrl: '/images/portfolio-civil.jpg',
   },
 ];
 
