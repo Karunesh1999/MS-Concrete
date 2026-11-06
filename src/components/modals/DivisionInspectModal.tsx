@@ -35,7 +35,7 @@ export const DivisionInspectModal: React.FC<DivisionInspectModalProps> = ({
             <h3 className="font-display text-2xl sm:text-3xl font-black uppercase tracking-tight drop-shadow-md">
               {division.title}
             </h3>
-            <p className="font-mono text-xs text-surveyor-lime mt-1 font-bold">
+            <p className="font-mono text-xs text-[#ea580c] mt-1 font-black">
               Classification: {division.category} • California C-8 Certified
             </p>
           </div>

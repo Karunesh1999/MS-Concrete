@@ -146,7 +146,7 @@ export const PortfolioScreen: React.FC<PortfolioScreenProps> = ({ onOpenEstimate
                 style={{ backgroundImage: `url("${activeModalProject.imageUrl}")` }}
               />
               <div className="p-8">
-                <span className="font-mono text-xs text-primary uppercase font-bold tracking-wider">
+                <span className="font-mono text-xs text-[#ea580c] font-black uppercase tracking-wider">
                   {activeModalProject.category} • {activeModalProject.location}
                 </span>
                 <h3 className="font-display text-2xl font-bold uppercase text-stone-charcoal mt-1 mb-3">
@@ -168,7 +168,7 @@ export const PortfolioScreen: React.FC<PortfolioScreenProps> = ({ onOpenEstimate
                       setActiveModalProject(null);
                       onOpenEstimate(type);
                     }}
-                    className="px-6 py-2.5 bg-primary text-white font-mono text-xs uppercase font-bold hover:bg-stone-charcoal transition-colors"
+                    className="px-6 py-2.5 bg-[#ea580c] hover:bg-[#c2410c] text-white font-mono text-xs uppercase font-extrabold transition-colors cursor-pointer"
                   >
                     Request Similar Build
                   </button>

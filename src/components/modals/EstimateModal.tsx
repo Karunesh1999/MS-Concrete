@@ -72,7 +72,7 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
           <div>
             <div className="flex items-center gap-2 mb-2">
               <span className="w-2 h-4 bg-[#ea580c] rounded-sm" />
-              <span className="font-mono text-xs uppercase tracking-wider text-surveyor-lime font-black">
+              <span className="font-mono text-xs uppercase tracking-wider text-[#ea580c] font-black">
                 Priority Dispatch
               </span>
             </div>

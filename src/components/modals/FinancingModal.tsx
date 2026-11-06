@@ -27,7 +27,7 @@ export const FinancingModal: React.FC<FinancingModalProps> = ({
         </button>
 
         <div className="flex items-center gap-2 mb-3">
-          <span className="w-2 h-2 bg-surveyor-lime rounded-full" />
+          <span className="w-2 h-2 bg-[#ea580c] rounded-full" />
           <span className="font-mono text-xs uppercase tracking-wider text-secondary font-bold">
             Synchrony Financial Verified Partner
           </span>
@@ -60,7 +60,7 @@ export const FinancingModal: React.FC<FinancingModalProps> = ({
         </div>
 
         <div className="bg-[#0b0f16] border border-white/20 text-white p-5 rounded-lg mb-6">
-          <h4 className="font-mono text-xs uppercase text-surveyor-lime font-black tracking-wider mb-2">
+          <h4 className="font-mono text-xs uppercase text-[#ea580c] font-black tracking-wider mb-2">
             Eligible Project Types
           </h4>
           <ul className="grid grid-cols-2 gap-2 font-sans text-xs text-stone-200 font-medium">

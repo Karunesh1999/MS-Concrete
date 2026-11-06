@@ -83,7 +83,7 @@ export const ServicesScreen: React.FC<ServicesScreenProps> = ({ onOpenEstimate }
               <div className="h-56 w-full bg-cover bg-center relative" style={{ backgroundImage: `url("${div.imageUrl}")` }}>
                 <div className="absolute inset-0 bg-stone-charcoal/60" />
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-surveyor-lime text-stone-charcoal font-mono text-[10px] font-bold uppercase tracking-wider rounded-full">
+                  <span className="px-3 py-1 bg-[#ea580c] text-white font-mono text-[10px] font-black uppercase tracking-wider rounded-full shadow">
                     {div.specTag}
                   </span>
                 </div>
@@ -98,7 +98,7 @@ export const ServicesScreen: React.FC<ServicesScreenProps> = ({ onOpenEstimate }
                   {div.description}
                 </p>
                 <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-                  <span className="font-mono text-xs text-surveyor-lime">{div.category}</span>
+                  <span className="font-mono text-xs text-[#ea580c] font-black">{div.category}</span>
                   <button
                     onClick={() => onOpenEstimate(div.id === 'structural' ? 'foundation-structural' : div.id === 'decorative' ? 'decorative-stamped' : 'civil-curb')}
                     className="font-mono text-xs text-white uppercase tracking-wider font-bold hover:underline flex items-center gap-1 cursor-pointer"
@@ -124,7 +124,7 @@ export const ServicesScreen: React.FC<ServicesScreenProps> = ({ onOpenEstimate }
               className="bg-white p-6 rounded-xl border border-stone-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
             >
               <div>
-                <span className="font-mono text-[10px] uppercase text-primary font-bold tracking-wider block mb-1">
+                <span className="font-mono text-[10px] uppercase text-[#ea580c] font-black tracking-wider block mb-1">
                   {service.category}
                 </span>
                 <h4 className="font-display text-base font-bold uppercase tracking-tight text-stone-charcoal mb-2">
@@ -136,7 +136,7 @@ export const ServicesScreen: React.FC<ServicesScreenProps> = ({ onOpenEstimate }
                 <ul className="space-y-1.5 mb-6">
                   {service.features.map((feat, i) => (
                     <li key={i} className="font-sans text-[11px] text-stone-600 flex items-start gap-1.5">
-                      <span className="text-primary font-bold">•</span>
+                      <span className="text-[#ea580c] font-bold">•</span>
                       <span>{feat}</span>
                     </li>
                   ))}

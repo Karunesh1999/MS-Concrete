@@ -56,7 +56,7 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
                   onNavigate(link.target);
                   onClose();
                 }}
-                className="text-left font-mono text-xs uppercase tracking-[0.2em] font-bold text-white hover:text-surveyor-lime transition-colors py-2 border-b border-white/10"
+                className="text-left font-mono text-xs uppercase tracking-[0.2em] font-bold text-white hover:text-[#ea580c] transition-colors py-2 border-b border-white/10"
               >
                 {link.label}
               </button>
@@ -70,7 +70,7 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
               onClose();
               onOpenEstimate();
             }}
-            className="w-full py-3.5 bg-primary-container text-white font-mono text-xs uppercase font-bold tracking-wider hover:bg-white hover:text-stone-charcoal transition-colors flex items-center justify-center gap-2 shadow-lg"
+            className="w-full py-3.5 bg-[#ea580c] hover:bg-[#c2410c] text-white font-mono text-xs uppercase font-extrabold tracking-wider transition-colors flex items-center justify-center gap-2 shadow-lg"
           >
             <span>Request Free Estimate</span>
             <span className="material-symbols-outlined text-sm">north_east</span>

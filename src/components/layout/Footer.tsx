@@ -26,9 +26,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenEstimate }) =>
               Engineered durability and precision concrete construction for commercial foundations, structural slabs, and high-spec civil environments. Over 25 years of proven field reliability.
             </p>
             
-            <div className="flex items-center gap-2 mt-4 font-mono text-xs text-surveyor-lime">
-              <span className="w-2 h-2 bg-surveyor-lime rounded-full shadow-[0_0_6px_#6EF712]" />
-              <span className="font-bold">SYNCHRONY FINANCIAL VERIFIED CONTRACTOR</span>
+            <div className="flex items-center gap-2 mt-4 font-mono text-xs text-[#ea580c]">
+              <span className="w-2 h-2 bg-[#ea580c] rounded-full shadow-[0_0_6px_#ea580c]" />
+              <span className="font-bold text-white">SYNCHRONY FINANCIAL VERIFIED CONTRACTOR</span>
             </div>
           </div>
 
@@ -64,7 +64,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenEstimate }) =>
               </li>
               <li
                 onClick={() => onNavigate?.('financing-section')}
-                className="hover:text-surveyor-lime transition-colors cursor-pointer font-semibold"
+                className="hover:text-[#ea580c] transition-colors cursor-pointer font-semibold text-zinc-200"
               >
                 Synchrony Project Financing →
               </li>
@@ -82,12 +82,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenEstimate }) =>
               
               <p className="mt-3 text-white font-medium">Direct Dispatch:</p>
               <p>
-                <a className="hover:text-surveyor-lime transition-colors font-bold text-white" href={`tel:${COMPANY_INFO.phoneRaw}`}>
+                <a className="hover:text-[#ea580c] transition-colors font-bold text-white" href={`tel:${COMPANY_INFO.phoneRaw}`}>
                   {COMPANY_INFO.phone}
                 </a>
               </p>
               <p>
-                <a className="hover:text-surveyor-lime transition-colors" href={`mailto:${COMPANY_INFO.bidsEmail}`}>
+                <a className="hover:text-[#ea580c] transition-colors text-zinc-300" href={`mailto:${COMPANY_INFO.bidsEmail}`}>
                   {COMPANY_INFO.bidsEmail}
                 </a>
               </p>
@@ -100,7 +100,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenEstimate }) =>
               Credentials
             </span>
             <div className="bg-black/50 border border-white/10 p-4 space-y-2 font-mono text-xs text-concrete-sand rounded">
-              <div className="text-surveyor-lime font-bold uppercase tracking-wider">California C-8</div>
+              <div className="text-[#ea580c] font-bold uppercase tracking-wider">California C-8</div>
               <div className="text-white font-semibold">{COMPANY_INFO.license}</div>
               <div className="text-zinc-400 pt-1">{COMPANY_INFO.bondedAmount}</div>
             </div>

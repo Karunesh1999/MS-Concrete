@@ -18,7 +18,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
   return (
     <div className={`mb-12 ${centered ? 'text-center max-w-2xl mx-auto' : ''}`}>
       <div className={`flex items-center gap-2 mb-2 ${centered ? 'justify-center' : ''}`}>
-        <span className="w-1.5 h-5 bg-primary" />
+        <span className="w-1.5 h-5 bg-[#ea580c] rounded-sm" />
         <span className="font-mono text-xs uppercase tracking-wider text-secondary font-semibold">
           {category}
         </span>

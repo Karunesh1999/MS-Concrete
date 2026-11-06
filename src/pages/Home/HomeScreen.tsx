@@ -83,8 +83,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
         <div className="relative z-20 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-20 lg:py-32 flex flex-col justify-center pt-[124px]">
           <div className="max-w-4xl mx-auto text-center flex flex-col items-center py-6">
             {/* High-Contrast Badge */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-black/75 border border-surveyor-lime/50 mb-8 shadow-lg rounded-full">
-              <span className="w-2.5 h-2.5 bg-surveyor-lime rounded-full animate-pulse shadow-[0_0_8px_#6EF712]" />
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-black/75 border border-[#ea580c]/60 mb-8 shadow-lg rounded-full">
+              <span className="w-2.5 h-2.5 bg-[#ea580c] rounded-full animate-pulse shadow-[0_0_8px_#ea580c]" />
               <span className="font-mono text-xs uppercase tracking-wider text-white font-bold">
                 25+ Years of Industry Excellence • Lic. #984210
               </span>
@@ -162,7 +162,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                         <span className="material-symbols-outlined text-2xl font-bold">verified</span>
                       </div>
                       <div>
-                        <div className="font-mono text-xs uppercase tracking-wider text-surveyor-lime font-black">
+                        <div className="font-mono text-xs uppercase tracking-wider text-[#ea580c] font-black">
                           Inland Empire Operations Hub
                         </div>
                         <div className="font-display text-sm sm:text-base font-bold text-white">
@@ -296,8 +296,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           <div className="bg-[#0b0f16]/90 border-2 border-white/25 p-8 sm:p-10 lg:p-14 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-10 rounded-2xl">
             <div className="max-w-2xl space-y-4">
               {/* Top Pill Badge with 100% White Text */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-black/80 text-white font-mono text-xs uppercase tracking-wider border border-white/40 rounded-full font-extrabold shadow-md">
-                <span className="w-2.5 h-2.5 bg-surveyor-lime rounded-full shadow-[0_0_8px_#6EF712]" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-black/80 text-white font-mono text-xs uppercase tracking-wider border border-[#ea580c]/60 rounded-full font-extrabold shadow-md">
+                <span className="w-2.5 h-2.5 bg-[#ea580c] rounded-full shadow-[0_0_8px_#ea580c]" />
                 <span className="text-white font-extrabold tracking-wider">
                   Financing Available Through Synchrony Bank
                 </span>
@@ -314,13 +314,13 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               {/* High-visibility feature chips with white text */}
               <div className="flex flex-wrap gap-2.5 pt-2">
                 <span className="px-3.5 py-1.5 bg-white/10 border border-white/30 text-white font-mono text-xs font-bold rounded-lg flex items-center gap-1.5 shadow-sm">
-                  <span className="text-surveyor-lime font-bold">✓</span> <span className="text-white">0% Intro APR Options</span>
+                  <span className="text-[#ea580c] font-black">✓</span> <span className="text-white font-bold">0% Intro APR Options</span>
                 </span>
                 <span className="px-3.5 py-1.5 bg-white/10 border border-white/30 text-white font-mono text-xs font-bold rounded-lg flex items-center gap-1.5 shadow-sm">
-                  <span className="text-surveyor-lime font-bold">✓</span> <span className="text-white">Soft Credit Check (No Score Impact)</span>
+                  <span className="text-[#ea580c] font-black">✓</span> <span className="text-white font-bold">Soft Credit Check (No Score Impact)</span>
                 </span>
                 <span className="px-3.5 py-1.5 bg-white/10 border border-white/30 text-white font-mono text-xs font-bold rounded-lg flex items-center gap-1.5 shadow-sm">
-                  <span className="text-surveyor-lime font-bold">✓</span> <span className="text-white">Up to $35,000+ Project Limit</span>
+                  <span className="text-[#ea580c] font-black">✓</span> <span className="text-white font-bold">Up to $35,000+ Project Limit</span>
                 </span>
               </div>
             </div>
@@ -451,7 +451,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-transparent p-6 flex flex-col justify-end text-white">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="font-mono text-[10px] uppercase text-surveyor-lime font-black tracking-wider px-2.5 py-0.5 bg-black/75 rounded-full border border-surveyor-lime/40">
+                    <span className="font-mono text-[10px] uppercase text-[#ea580c] font-black tracking-wider px-2.5 py-0.5 bg-black/75 rounded-full border border-[#ea580c]/50">
                       {project.category}
                     </span>
                     <span className="font-mono text-[11px] text-zinc-300 font-bold bg-black/60 px-2 py-0.5 rounded">
@@ -480,8 +480,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           <div className="bg-[#0b0f16] border-2 border-white/30 p-8 sm:p-10 lg:p-14 rounded-2xl shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-10 text-white relative">
             <div className="max-w-2xl space-y-4">
               {/* Badge with 100% Bright Crisp White Text */}
-              <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-black/90 text-white font-mono text-xs uppercase tracking-wider border-2 border-white/40 rounded-full font-black shadow-md">
-                <span className="w-2.5 h-2.5 bg-surveyor-lime rounded-full shadow-[0_0_8px_#6EF712]" />
+              <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-black/90 text-white font-mono text-xs uppercase tracking-wider border-2 border-[#ea580c]/60 rounded-full font-black shadow-md">
+                <span className="w-2.5 h-2.5 bg-[#ea580c] rounded-full shadow-[0_0_8px_#ea580c]" />
                 <span className="text-white font-black tracking-wider drop-shadow-sm">
                   Join Our Field Crew • Southern California C-8 Certified
                 </span>
@@ -500,13 +500,13 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               {/* High-visibility benefit chips */}
               <div className="flex flex-wrap gap-2.5 pt-2">
                 <span className="px-4 py-2 bg-white/15 border-2 border-white/30 text-white font-mono text-xs font-black rounded-xl flex items-center gap-2 shadow-sm">
-                  <span className="text-surveyor-lime font-black">✓</span> <span className="text-white font-black">$22 – $42 / hr Hourly Pay</span>
+                  <span className="text-[#ea580c] font-black">✓</span> <span className="text-white font-black">$22 – $42 / hr Hourly Pay</span>
                 </span>
                 <span className="px-4 py-2 bg-white/15 border-2 border-white/30 text-white font-mono text-xs font-black rounded-xl flex items-center gap-2 shadow-sm">
-                  <span className="text-surveyor-lime font-black">✓</span> <span className="text-white font-black">Year-Round 40+ Hours / Wk</span>
+                  <span className="text-[#ea580c] font-black">✓</span> <span className="text-white font-black">Year-Round 40+ Hours / Wk</span>
                 </span>
                 <span className="px-4 py-2 bg-white/15 border-2 border-white/30 text-white font-mono text-xs font-black rounded-xl flex items-center gap-2 shadow-sm">
-                  <span className="text-surveyor-lime font-black">✓</span> <span className="text-white font-black">OSHA Safety Certified</span>
+                  <span className="text-[#ea580c] font-black">✓</span> <span className="text-white font-black">OSHA Safety Certified</span>
                 </span>
               </div>
             </div>
@@ -550,8 +550,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             <div className="lg:col-span-5 flex flex-col justify-between">
               <div>
                 <div className="inline-flex items-center gap-2 mb-3">
-                  <span className="w-2 h-2 bg-surveyor-lime rounded-full" />
-                  <span className="font-mono text-xs uppercase tracking-wider text-surveyor-lime font-bold">
+                  <span className="w-2 h-2 bg-[#ea580c] rounded-full" />
+                  <span className="font-mono text-xs uppercase tracking-wider text-[#ea580c] font-black">
                     Direct Dispatch • Menifee Headquarters
                   </span>
                 </div>
@@ -566,7 +566,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-rebar-steel flex items-center justify-center text-surveyor-lime shrink-0">
+                    <div className="w-10 h-10 bg-rebar-steel flex items-center justify-center text-[#ea580c] shrink-0">
                       <span className="material-symbols-outlined">location_on</span>
                     </div>
                     <div>
@@ -576,13 +576,13 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-rebar-steel flex items-center justify-center text-surveyor-lime shrink-0">
+                    <div className="w-10 h-10 bg-rebar-steel flex items-center justify-center text-[#ea580c] shrink-0">
                       <span className="material-symbols-outlined">call</span>
                     </div>
                     <div>
                       <div className="font-mono text-xs uppercase text-concrete-aggregate">Direct Telephone</div>
                       <a
-                        className="font-display text-base text-white hover:text-surveyor-lime transition-colors block"
+                        className="font-display text-base text-white hover:text-[#ea580c] transition-colors block"
                         href={`tel:${COMPANY_INFO.phoneRaw}`}
                       >
                         {COMPANY_INFO.phone}
@@ -591,13 +591,13 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-rebar-steel flex items-center justify-center text-surveyor-lime shrink-0">
+                    <div className="w-10 h-10 bg-rebar-steel flex items-center justify-center text-[#ea580c] shrink-0">
                       <span className="material-symbols-outlined">mail</span>
                     </div>
                     <div>
                       <div className="font-mono text-xs uppercase text-concrete-aggregate">Estimating Email</div>
                       <a
-                        className="font-display text-base text-white hover:text-surveyor-lime transition-colors block"
+                        className="font-display text-base text-white hover:text-[#ea580c] transition-colors block"
                         href={`mailto:${COMPANY_INFO.email}`}
                       >
                         {COMPANY_INFO.email}
@@ -613,7 +613,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                   <span className="material-symbols-outlined text-2xl font-bold">verified</span>
                 </div>
                 <div>
-                  <span className="font-mono text-[11px] text-surveyor-lime font-black tracking-wider uppercase block">
+                  <span className="font-mono text-[11px] text-[#ea580c] font-black tracking-wider uppercase block">
                     California State License Board (CSLB)
                   </span>
                   <span className="font-display text-sm sm:text-base text-white font-black block mt-0.5">

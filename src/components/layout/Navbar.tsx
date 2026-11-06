@@ -48,8 +48,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                 key={link.target}
                 onClick={() => onNavigate(link.target)}
                 className={`py-1.5 transition-all cursor-pointer relative ${isActive
-                    ? 'text-surveyor-lime border-b-2 border-surveyor-lime font-extrabold'
-                    : 'text-zinc-100 hover:text-white hover:border-b-2 hover:border-white/50'
+                    ? 'text-[#ea580c] border-b-2 border-[#ea580c] font-black'
+                    : 'text-zinc-200 hover:text-white hover:border-b-2 hover:border-white/60'
                   }`}
               >
                 {link.label}

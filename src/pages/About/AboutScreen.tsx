@@ -30,7 +30,7 @@ export const AboutScreen: React.FC<AboutScreenProps> = ({ onOpenEstimate }) => {
               Over 25+ years, we have poured over 1,500 projects spanning custom estate driveways, architectural stamped courtyards, commercial foundations, and civil infrastructure across Menifee, Murrieta, Temecula, and the greater Inland Empire.
             </p>
             <div className="p-5 bg-stone-charcoal text-white rounded-xl border border-stone-800">
-              <span className="font-mono text-xs text-surveyor-lime font-bold uppercase tracking-wider block mb-1">
+              <span className="font-mono text-xs text-[#ea580c] font-black uppercase tracking-wider block mb-1">
                 Owner-Supervised Standards
               </span>
               <p className="font-sans text-xs text-concrete-aggregate leading-relaxed">
@@ -61,7 +61,7 @@ export const AboutScreen: React.FC<AboutScreenProps> = ({ onOpenEstimate }) => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-20">
           {HERO_METRICS.map((metric, i) => (
             <div key={i} className="bg-surface-container-high p-6 rounded-xl border border-stone-200 text-center">
-              <div className="font-display text-3xl font-bold text-primary mb-1">{metric.value}</div>
+              <div className="font-display text-3xl font-black text-[#ea580c] mb-1">{metric.value}</div>
               <div className="font-mono text-xs uppercase text-stone-700 tracking-wider font-semibold">
                 {metric.label}
               </div>
@@ -76,7 +76,7 @@ export const AboutScreen: React.FC<AboutScreenProps> = ({ onOpenEstimate }) => {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-3">
-              <div className="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#ea580c] text-white rounded-lg flex items-center justify-center">
                 <span className="material-symbols-outlined text-2xl">verified</span>
               </div>
               <h4 className="font-display text-lg font-bold uppercase text-stone-charcoal">Structural Integrity</h4>
@@ -86,7 +86,7 @@ export const AboutScreen: React.FC<AboutScreenProps> = ({ onOpenEstimate }) => {
             </div>
 
             <div className="space-y-3">
-              <div className="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#ea580c] text-white rounded-lg flex items-center justify-center">
                 <span className="material-symbols-outlined text-2xl">architecture</span>
               </div>
               <h4 className="font-display text-lg font-bold uppercase text-stone-charcoal">Artisan Finishing</h4>
@@ -96,7 +96,7 @@ export const AboutScreen: React.FC<AboutScreenProps> = ({ onOpenEstimate }) => {
             </div>
 
             <div className="space-y-3">
-              <div className="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#ea580c] text-white rounded-lg flex items-center justify-center">
                 <span className="material-symbols-outlined text-2xl">handshake</span>
               </div>
               <h4 className="font-display text-lg font-bold uppercase text-stone-charcoal">Transparent Bidding</h4>

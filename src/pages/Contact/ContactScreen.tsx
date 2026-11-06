@@ -76,11 +76,11 @@ export const ContactScreen: React.FC = () => {
         {/* Contact Quick Meta Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           <div className="bg-stone-charcoal text-white p-6 sm:p-8 rounded-xl shadow-lg border border-stone-800 flex items-start gap-4">
-            <div className="w-12 h-12 bg-primary flex items-center justify-center shrink-0 rounded-lg">
+            <div className="w-12 h-12 bg-[#ea580c] flex items-center justify-center shrink-0 rounded-lg">
               <span className="material-symbols-outlined text-2xl text-white">location_on</span>
             </div>
             <div>
-              <span className="font-mono text-xs uppercase text-surveyor-lime font-bold tracking-wider block mb-1">
+              <span className="font-mono text-xs uppercase text-[#ea580c] font-black tracking-wider block mb-1">
                 Office &amp; Headquarters
               </span>
               <div className="font-display text-base font-bold text-white leading-snug">
@@ -93,16 +93,16 @@ export const ContactScreen: React.FC = () => {
           </div>
 
           <div className="bg-stone-charcoal text-white p-6 sm:p-8 rounded-xl shadow-lg border border-stone-800 flex items-start gap-4">
-            <div className="w-12 h-12 bg-primary flex items-center justify-center shrink-0 rounded-lg">
+            <div className="w-12 h-12 bg-[#ea580c] flex items-center justify-center shrink-0 rounded-lg">
               <span className="material-symbols-outlined text-2xl text-white">call</span>
             </div>
             <div>
-              <span className="font-mono text-xs uppercase text-surveyor-lime font-bold tracking-wider block mb-1">
+              <span className="font-mono text-xs uppercase text-[#ea580c] font-black tracking-wider block mb-1">
                 Telephone Dispatch
               </span>
               <a
                 href={`tel:${COMPANY_INFO.phoneRaw}`}
-                className="font-display text-xl font-bold text-white hover:text-surveyor-lime transition-colors block"
+                className="font-display text-xl font-bold text-white hover:text-[#ea580c] transition-colors block"
               >
                 {COMPANY_INFO.phone}
               </a>
@@ -113,16 +113,16 @@ export const ContactScreen: React.FC = () => {
           </div>
 
           <div className="bg-stone-charcoal text-white p-6 sm:p-8 rounded-xl shadow-lg border border-stone-800 flex items-start gap-4">
-            <div className="w-12 h-12 bg-primary flex items-center justify-center shrink-0 rounded-lg">
+            <div className="w-12 h-12 bg-[#ea580c] flex items-center justify-center shrink-0 rounded-lg">
               <span className="material-symbols-outlined text-2xl text-white">mail</span>
             </div>
             <div>
-              <span className="font-mono text-xs uppercase text-surveyor-lime font-bold tracking-wider block mb-1">
+              <span className="font-mono text-xs uppercase text-[#ea580c] font-black tracking-wider block mb-1">
                 Estimating &amp; Bids
               </span>
               <a
                 href={`mailto:${COMPANY_INFO.email}`}
-                className="font-display text-base font-bold text-white hover:text-surveyor-lime transition-colors block"
+                className="font-display text-base font-bold text-white hover:text-[#ea580c] transition-colors block"
               >
                 {COMPANY_INFO.email}
               </a>
@@ -310,7 +310,7 @@ export const ContactScreen: React.FC = () => {
           <div className="lg:col-span-5 space-y-8">
             {/* Quick Takeoff Calculator */}
             <div className="bg-stone-charcoal text-white p-6 sm:p-8 rounded-2xl shadow-xl border border-stone-800">
-              <span className="font-mono text-xs uppercase text-surveyor-lime font-bold tracking-wider block mb-1">
+              <span className="font-mono text-xs uppercase text-[#ea580c] font-black tracking-wider block mb-1">
                 Concrete Volume Estimator
               </span>
               <h4 className="font-display text-xl font-bold uppercase text-white mb-4">
@@ -330,7 +330,7 @@ export const ContactScreen: React.FC = () => {
                     step="50"
                     value={formData.sqFt}
                     onChange={(e) => setFormData({ ...formData, sqFt: Number(e.target.value) })}
-                    className="w-full h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-surveyor-lime"
+                    className="w-full h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-[#ea580c]"
                   />
                 </div>
 
@@ -347,7 +347,7 @@ export const ContactScreen: React.FC = () => {
                         onClick={() => setFormData({ ...formData, thickness: t })}
                         className={`py-1.5 font-mono text-xs font-bold rounded border ${
                           formData.thickness === t
-                            ? 'bg-surveyor-lime text-stone-900 border-surveyor-lime'
+                            ? 'bg-[#ea580c] text-white border-[#ea580c]'
                             : 'bg-stone-800 text-stone-300 border-stone-700'
                         }`}
                       >
@@ -362,7 +362,7 @@ export const ContactScreen: React.FC = () => {
                 <span className="font-mono text-xs uppercase text-concrete-sand">
                   Estimated Ready-Mix Yards:
                 </span>
-                <span className="font-display text-2xl font-black text-surveyor-lime">
+                <span className="font-display text-2xl font-black text-[#ea580c]">
                   ~{cubicYards} Cu. Yds
                 </span>
               </div>

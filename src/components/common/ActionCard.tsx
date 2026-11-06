@@ -27,7 +27,7 @@ export const ActionCard: React.FC<ActionCardProps> = ({ division, onInspect }) =
             <span className="font-mono text-xs font-black tracking-wider uppercase drop-shadow-md text-zinc-100">
               {division.subtitle}
             </span>
-            <span className="px-3 py-1 rounded-full bg-black/85 border border-surveyor-lime text-surveyor-lime font-mono text-[10px] uppercase font-black tracking-wider shadow">
+            <span className="px-3 py-1 rounded-full bg-black/85 border border-[#ea580c] text-[#ea580c] font-mono text-[10px] uppercase font-black tracking-wider shadow">
               {division.specTag}
             </span>
           </div>

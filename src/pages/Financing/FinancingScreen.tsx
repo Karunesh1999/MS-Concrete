@@ -52,8 +52,8 @@ export const FinancingScreen: React.FC<FinancingScreenProps> = ({ onOpenEstimate
         {/* Value Proposition Hero Banner */}
         <div className="relative bg-stone-charcoal text-white rounded-2xl overflow-hidden p-8 sm:p-14 mb-20 shadow-2xl border border-stone-800">
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-surveyor-lime/10 border border-surveyor-lime/40 text-surveyor-lime font-mono text-xs uppercase tracking-wider font-bold rounded-full">
-              <span className="w-2 h-2 bg-surveyor-lime rounded-full" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#ea580c]/10 border border-[#ea580c]/40 text-[#ea580c] font-mono text-xs uppercase tracking-wider font-bold rounded-full">
+              <span className="w-2 h-2 bg-[#ea580c] rounded-full" />
               Verified Contractor Portal
             </div>
             <h3 className="font-display text-3xl sm:text-5xl font-extrabold uppercase tracking-tight">
@@ -132,7 +132,7 @@ export const FinancingScreen: React.FC<FinancingScreenProps> = ({ onOpenEstimate
             </div>
 
             <div className="lg:col-span-5 bg-stone-charcoal text-white p-8 rounded-xl shadow-2xl border border-stone-800 text-center">
-              <span className="font-mono text-xs text-surveyor-lime uppercase font-bold tracking-wider block mb-1">
+              <span className="font-mono text-xs text-[#ea580c] uppercase font-black tracking-wider block mb-1">
                 Estimated Monthly Payment
               </span>
               <div className="font-display text-4xl sm:text-5xl font-black text-white mb-2">
