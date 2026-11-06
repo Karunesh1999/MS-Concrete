@@ -1,5 +1,6 @@
 import React from 'react';
 import { COMPANY_INFO } from '../../data/concreteData.ts';
+import { MSCCLogo } from '../common/MSCCLogo.tsx';
 
 interface FooterProps {
   onNavigate?: (target: string) => void;
@@ -13,13 +14,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenEstimate }) =>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
           {/* Brand Info */}
           <div className="lg:col-span-4 flex flex-col gap-4">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 bg-primary flex items-center justify-center rounded">
-                <span className="font-display text-base text-white font-bold">M</span>
-              </div>
-              <span className="font-display text-lg font-bold tracking-tight text-white uppercase">
-                Morning Star
-              </span>
+            <div
+              onClick={() => onNavigate?.('home')}
+              className="cursor-pointer inline-flex items-center self-start"
+            >
+              <MSCCLogo />
             </div>
             
             <p className="font-sans text-sm text-zinc-300 max-w-sm mt-2 leading-relaxed">
