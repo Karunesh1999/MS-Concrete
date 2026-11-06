@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import { SectionHeader } from '../../components/common/SectionHeader.tsx';
 import { COMPANY_INFO } from '../../data/concreteData.ts';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '../../components/ui/select.tsx';
 
 export const CareersScreen: React.FC = () => {
   const [applicantData, setApplicantData] = useState({
@@ -235,47 +242,39 @@ export const CareersScreen: React.FC = () => {
                   <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-black mb-2" htmlFor="applicant-position">
                     Position Desired *
                   </label>
-                  <div className="relative">
-                    <select
-                      id="applicant-position"
-                      className="w-full appearance-none bg-white pr-11 pl-4 py-3 font-sans text-sm text-stone-900 border-2 border-stone-300 rounded-xl outline-none focus:ring-2 focus:ring-[#ea580c] font-bold shadow-sm cursor-pointer transition-all"
-                      value={applicantData.position}
-                      onChange={(e) => setApplicantData({ ...applicantData, position: e.target.value })}
-                    >
-                      <option value="finisher">Lead Concrete Finisher</option>
-                      <option value="carpenter">Formwork Carpenter &amp; Rebar</option>
-                      <option value="operator">Skid-Steer / Equipment Operator</option>
-                      <option value="laborer">Concrete Prep &amp; Demolition Laborer</option>
-                    </select>
-                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
-                      <div className="w-7 h-7 rounded-lg bg-stone-100 border border-stone-300 flex items-center justify-center text-stone-900 shadow-sm">
-                        <span className="material-symbols-outlined text-lg font-bold leading-none">expand_more</span>
-                      </div>
-                    </div>
-                  </div>
+                  <Select
+                    value={applicantData.position}
+                    onValueChange={(val) => setApplicantData({ ...applicantData, position: val })}
+                  >
+                    <SelectTrigger id="applicant-position" className="w-full">
+                      <SelectValue placeholder="Select position" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="finisher">Lead Concrete Finisher</SelectItem>
+                      <SelectItem value="carpenter">Formwork Carpenter &amp; Rebar</SelectItem>
+                      <SelectItem value="operator">Skid-Steer / Equipment Operator</SelectItem>
+                      <SelectItem value="laborer">Concrete Prep &amp; Demolition Laborer</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
                 <div>
                   <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-black mb-2" htmlFor="applicant-exp">
                     Years of Concrete Exp. *
                   </label>
-                  <div className="relative">
-                    <select
-                      id="applicant-exp"
-                      className="w-full appearance-none bg-white pr-11 pl-4 py-3 font-sans text-sm text-stone-900 border-2 border-stone-300 rounded-xl outline-none focus:ring-2 focus:ring-[#ea580c] font-bold shadow-sm cursor-pointer transition-all"
-                      value={applicantData.experienceYears}
-                      onChange={(e) => setApplicantData({ ...applicantData, experienceYears: e.target.value })}
-                    >
-                      <option value="1-2">1 to 2 Years</option>
-                      <option value="3-5">3 to 5 Years</option>
-                      <option value="5-10">5 to 10 Years</option>
-                      <option value="10+">10+ Years (Senior)</option>
-                    </select>
-                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
-                      <div className="w-7 h-7 rounded-lg bg-stone-100 border border-stone-300 flex items-center justify-center text-stone-900 shadow-sm">
-                        <span className="material-symbols-outlined text-lg font-bold leading-none">expand_more</span>
-                      </div>
-                    </div>
-                  </div>
+                  <Select
+                    value={applicantData.experienceYears}
+                    onValueChange={(val) => setApplicantData({ ...applicantData, experienceYears: val })}
+                  >
+                    <SelectTrigger id="applicant-exp" className="w-full">
+                      <SelectValue placeholder="Select experience" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="1-2">1 to 2 Years</SelectItem>
+                      <SelectItem value="3-5">3 to 5 Years</SelectItem>
+                      <SelectItem value="5-10">5 to 10 Years</SelectItem>
+                      <SelectItem value="10+">10+ Years (Senior)</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
               </div>
 

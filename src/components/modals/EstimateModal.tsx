@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
 import type { EstimateFormData } from '../../types/concrete.ts';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '../ui/select.tsx';
 
 interface EstimateModalProps {
   isOpen: boolean;
@@ -127,27 +134,23 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
                   <label className="block font-mono text-xs uppercase tracking-wider text-white font-black mb-1.5 drop-shadow-sm" htmlFor="modal-type">
                     Project Classification *
                   </label>
-                  {/* Custom High-End Select Dropdown with Clean Chevron */}
-                  <div className="relative">
-                    <select
-                      id="modal-type"
-                      value={formData.projectType}
-                      onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                      className="w-full appearance-none bg-white pr-11 pl-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border-2 border-stone-300 font-bold rounded-xl cursor-pointer transition-all"
-                    >
-                      <option value="residential-driveway">Residential Driveway / Sidewalk (Broom Finish)</option>
-                      <option value="decorative-stamped">Decorative Stamped Patio / Pool Deck (Color &amp; Seal)</option>
-                      <option value="foundation-structural">Commercial Foundation Slab / Approach Slab</option>
-                      <option value="civil-curb">Curb &amp; Gutter / Civil Infrastructure</option>
-                      <option value="retaining-wall">Engineered Cantilever Retaining Wall</option>
-                      <option value="patch-repair">Structural Concrete Patch &amp; Repair</option>
-                    </select>
-                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
-                      <div className="w-7 h-7 rounded-lg bg-stone-100 border border-stone-300 flex items-center justify-center text-stone-900 shadow-sm">
-                        <span className="material-symbols-outlined text-lg font-bold leading-none">expand_more</span>
-                      </div>
-                    </div>
-                  </div>
+                  {/* Shadcn UI Dropdown Component */}
+                  <Select
+                    value={formData.projectType}
+                    onValueChange={(val) => setFormData({ ...formData, projectType: val })}
+                  >
+                    <SelectTrigger id="modal-type" className="w-full">
+                      <SelectValue placeholder="Select project classification" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="residential-driveway">Residential Driveway / Sidewalk (Broom Finish)</SelectItem>
+                      <SelectItem value="decorative-stamped">Decorative Stamped Patio / Pool Deck (Color &amp; Seal)</SelectItem>
+                      <SelectItem value="foundation-structural">Commercial Foundation Slab / Approach Slab</SelectItem>
+                      <SelectItem value="civil-curb">Curb &amp; Gutter / Civil Infrastructure</SelectItem>
+                      <SelectItem value="retaining-wall">Engineered Cantilever Retaining Wall</SelectItem>
+                      <SelectItem value="patch-repair">Structural Concrete Patch &amp; Repair</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
               </div>
 

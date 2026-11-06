@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import { SectionHeader } from '../../components/common/SectionHeader.tsx';
 import { COMPANY_INFO } from '../../data/concreteData.ts';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '../../components/ui/select.tsx';
 
 export const ContactScreen: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -229,26 +236,22 @@ export const ContactScreen: React.FC = () => {
                     <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-black mb-1.5" htmlFor="contact-scope">
                       Concrete Scope *
                     </label>
-                    <div className="relative">
-                      <select
-                        id="contact-scope"
-                        className="w-full appearance-none bg-white pr-11 pl-4 py-3 font-sans text-sm text-stone-900 border-2 border-stone-300 rounded-xl outline-none focus:ring-2 focus:ring-[#ea580c] font-bold shadow-sm cursor-pointer transition-all"
-                        value={formData.projectScope}
-                        onChange={(e) => setFormData({ ...formData, projectScope: e.target.value })}
-                      >
-                        <option value="residential-driveway">Driveway / Sidewalk (Broom Finish)</option>
-                        <option value="decorative-stamped">Decorative Stamped Patio / Pool Deck</option>
-                        <option value="foundation-structural">Structural Foundation Slab</option>
-                        <option value="civil-curb">Curb &amp; Gutter / Approach Slab</option>
-                        <option value="retaining-wall">Engineered Retaining Wall</option>
-                        <option value="patch-repair">Concrete Patch &amp; Spall Repair</option>
-                      </select>
-                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
-                        <div className="w-7 h-7 rounded-lg bg-stone-100 border border-stone-300 flex items-center justify-center text-stone-900 shadow-sm">
-                          <span className="material-symbols-outlined text-lg font-bold leading-none">expand_more</span>
-                        </div>
-                      </div>
-                    </div>
+                    <Select
+                      value={formData.projectScope}
+                      onValueChange={(val) => setFormData({ ...formData, projectScope: val })}
+                    >
+                      <SelectTrigger id="contact-scope" className="w-full">
+                        <SelectValue placeholder="Select concrete scope" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="residential-driveway">Driveway / Sidewalk (Broom Finish)</SelectItem>
+                        <SelectItem value="decorative-stamped">Decorative Stamped Patio / Pool Deck</SelectItem>
+                        <SelectItem value="foundation-structural">Structural Foundation Slab</SelectItem>
+                        <SelectItem value="civil-curb">Curb &amp; Gutter / Approach Slab</SelectItem>
+                        <SelectItem value="retaining-wall">Engineered Retaining Wall</SelectItem>
+                        <SelectItem value="patch-repair">Concrete Patch &amp; Spall Repair</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
                   <div>
                     <label className="block font-mono text-xs uppercase tracking-wider text-secondary mb-1.5" htmlFor="contact-loc">

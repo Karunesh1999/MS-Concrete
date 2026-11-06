@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import { ActionCard } from '../../components/common/ActionCard.tsx';
 import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '../../components/ui/select.tsx';
+import {
   COMPANY_INFO,
   HERO_METRICS,
   CONCRETE_DIVISIONS,
@@ -678,26 +685,22 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                     <label className="block font-mono text-xs uppercase tracking-wider text-white font-black mb-2 drop-shadow-sm" htmlFor="projectType">
                       Project Scope / Classification *
                     </label>
-                    <div className="relative">
-                      <select
-                        className="w-full appearance-none bg-white pr-11 pl-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border-2 border-stone-300 font-bold rounded-lg cursor-pointer transition-all"
-                        id="projectType"
-                        value={inlineEstimateData.projectType}
-                        onChange={(e) => setInlineEstimateData({ ...inlineEstimateData, projectType: e.target.value })}
-                      >
-                        <option value="residential-driveway">Residential Driveway / Sidewalk (Broom Finish)</option>
-                        <option value="decorative-stamped">Decorative Stamped Patio / Pool Deck (Color &amp; Seal)</option>
-                        <option value="foundation-structural">Commercial Foundation Slab / Approach Slab</option>
-                        <option value="civil-curb">Curb &amp; Gutter / Civil Infrastructure</option>
-                        <option value="retaining-wall">Engineered Cantilever Retaining Wall</option>
-                        <option value="patch-repair">Structural Concrete Patch &amp; Repair</option>
-                      </select>
-                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
-                        <div className="w-7 h-7 rounded-lg bg-stone-100 border border-stone-300 flex items-center justify-center text-stone-900 shadow-sm">
-                          <span className="material-symbols-outlined text-lg font-bold leading-none">expand_more</span>
-                        </div>
-                      </div>
-                    </div>
+                    <Select
+                      value={inlineEstimateData.projectType}
+                      onValueChange={(val) => setInlineEstimateData({ ...inlineEstimateData, projectType: val })}
+                    >
+                      <SelectTrigger id="projectType" className="w-full">
+                        <SelectValue placeholder="Select project scope" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="residential-driveway">Residential Driveway / Sidewalk (Broom Finish)</SelectItem>
+                        <SelectItem value="decorative-stamped">Decorative Stamped Patio / Pool Deck (Color &amp; Seal)</SelectItem>
+                        <SelectItem value="foundation-structural">Commercial Foundation Slab / Approach Slab</SelectItem>
+                        <SelectItem value="civil-curb">Curb &amp; Gutter / Civil Infrastructure</SelectItem>
+                        <SelectItem value="retaining-wall">Engineered Cantilever Retaining Wall</SelectItem>
+                        <SelectItem value="patch-repair">Structural Concrete Patch &amp; Repair</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
                 </div>
 
