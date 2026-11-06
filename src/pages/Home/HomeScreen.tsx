@@ -169,14 +169,6 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                   </div>
                 </div>
               </div>
-
-              {/* Floating Quality Seal Chip */}
-              <div className="absolute -top-4 -right-2 sm:-right-4 bg-[#0b0f16] border-2 border-[#ea580c] text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3">
-                <span className="font-display text-2xl sm:text-3xl font-black text-[#ea580c]">25+</span>
-                <div className="text-left font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-200 leading-tight">
-                  Years Proven<br /><span className="text-white font-bold">Field Reliability</span>
-                </div>
-              </div>
             </div>
 
             {/* Right Column: Structured Heritage Content */}
@@ -686,20 +678,26 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                     <label className="block font-mono text-xs uppercase tracking-wider text-white font-black mb-2 drop-shadow-sm" htmlFor="projectType">
                       Project Scope / Classification *
                     </label>
-                    <select
-                      className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border-2 border-stone-300 font-bold rounded-lg cursor-pointer"
-                      id="projectType"
-                      value={inlineEstimateData.projectType}
-                      onChange={(e) => setInlineEstimateData({ ...inlineEstimateData, projectType: e.target.value })}
-                    >
-                      <option value="residential-driveway">Residential Driveway / Sidewalk (Broom Finish)</option>
-                      <option value="decorative-stamped">Decorative Stamped Concrete (Color &amp; Seal)</option>
-                      <option value="patio-pool">Patio Slab or Pool Deck</option>
-                      <option value="foundation-structural">Commercial Foundation Slab / Approach Slab</option>
-                      <option value="civil-curb">Curb &amp; Gutter / Civil Infrastructure</option>
-                      <option value="retaining-wall">Engineered Retaining Wall</option>
-                      <option value="patch-repair">Concrete Patch &amp; Repair</option>
-                    </select>
+                    <div className="relative">
+                      <select
+                        className="w-full appearance-none bg-white pr-11 pl-4 py-3 font-sans text-sm text-stone-900 outline-none focus:ring-2 focus:ring-[#ea580c] shadow-sm border-2 border-stone-300 font-bold rounded-lg cursor-pointer transition-all"
+                        id="projectType"
+                        value={inlineEstimateData.projectType}
+                        onChange={(e) => setInlineEstimateData({ ...inlineEstimateData, projectType: e.target.value })}
+                      >
+                        <option value="residential-driveway">Residential Driveway / Sidewalk (Broom Finish)</option>
+                        <option value="decorative-stamped">Decorative Stamped Patio / Pool Deck (Color &amp; Seal)</option>
+                        <option value="foundation-structural">Commercial Foundation Slab / Approach Slab</option>
+                        <option value="civil-curb">Curb &amp; Gutter / Civil Infrastructure</option>
+                        <option value="retaining-wall">Engineered Cantilever Retaining Wall</option>
+                        <option value="patch-repair">Structural Concrete Patch &amp; Repair</option>
+                      </select>
+                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                        <div className="w-7 h-7 rounded-lg bg-stone-100 border border-stone-300 flex items-center justify-center text-stone-900 shadow-sm">
+                          <span className="material-symbols-outlined text-lg font-bold leading-none">expand_more</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 

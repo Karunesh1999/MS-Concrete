@@ -232,36 +232,50 @@ export const CareersScreen: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label className="block font-mono text-xs uppercase tracking-wider text-secondary mb-2" htmlFor="applicant-position">
+                  <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-black mb-2" htmlFor="applicant-position">
                     Position Desired *
                   </label>
-                  <select
-                    id="applicant-position"
-                    className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-charcoal border border-stone-300 outline-none focus:ring-2 focus:ring-primary shadow-sm"
-                    value={applicantData.position}
-                    onChange={(e) => setApplicantData({ ...applicantData, position: e.target.value })}
-                  >
-                    <option value="finisher">Lead Concrete Finisher</option>
-                    <option value="carpenter">Formwork Carpenter &amp; Rebar</option>
-                    <option value="operator">Skid-Steer / Equipment Operator</option>
-                    <option value="laborer">Concrete Prep &amp; Demolition Laborer</option>
-                  </select>
+                  <div className="relative">
+                    <select
+                      id="applicant-position"
+                      className="w-full appearance-none bg-white pr-11 pl-4 py-3 font-sans text-sm text-stone-900 border-2 border-stone-300 rounded-xl outline-none focus:ring-2 focus:ring-[#ea580c] font-bold shadow-sm cursor-pointer transition-all"
+                      value={applicantData.position}
+                      onChange={(e) => setApplicantData({ ...applicantData, position: e.target.value })}
+                    >
+                      <option value="finisher">Lead Concrete Finisher</option>
+                      <option value="carpenter">Formwork Carpenter &amp; Rebar</option>
+                      <option value="operator">Skid-Steer / Equipment Operator</option>
+                      <option value="laborer">Concrete Prep &amp; Demolition Laborer</option>
+                    </select>
+                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                      <div className="w-7 h-7 rounded-lg bg-stone-100 border border-stone-300 flex items-center justify-center text-stone-900 shadow-sm">
+                        <span className="material-symbols-outlined text-lg font-bold leading-none">expand_more</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div>
-                  <label className="block font-mono text-xs uppercase tracking-wider text-secondary mb-2" htmlFor="applicant-exp">
+                  <label className="block font-mono text-xs uppercase tracking-wider text-stone-900 font-black mb-2" htmlFor="applicant-exp">
                     Years of Concrete Exp. *
                   </label>
-                  <select
-                    id="applicant-exp"
-                    className="w-full bg-white px-4 py-3 font-sans text-sm text-stone-charcoal border border-stone-300 outline-none focus:ring-2 focus:ring-primary shadow-sm"
-                    value={applicantData.experienceYears}
-                    onChange={(e) => setApplicantData({ ...applicantData, experienceYears: e.target.value })}
-                  >
-                    <option value="1-2">1 to 2 Years</option>
-                    <option value="3-5">3 to 5 Years</option>
-                    <option value="5-10">5 to 10 Years</option>
-                    <option value="10+">10+ Years (Senior)</option>
-                  </select>
+                  <div className="relative">
+                    <select
+                      id="applicant-exp"
+                      className="w-full appearance-none bg-white pr-11 pl-4 py-3 font-sans text-sm text-stone-900 border-2 border-stone-300 rounded-xl outline-none focus:ring-2 focus:ring-[#ea580c] font-bold shadow-sm cursor-pointer transition-all"
+                      value={applicantData.experienceYears}
+                      onChange={(e) => setApplicantData({ ...applicantData, experienceYears: e.target.value })}
+                    >
+                      <option value="1-2">1 to 2 Years</option>
+                      <option value="3-5">3 to 5 Years</option>
+                      <option value="5-10">5 to 10 Years</option>
+                      <option value="10+">10+ Years (Senior)</option>
+                    </select>
+                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                      <div className="w-7 h-7 rounded-lg bg-stone-100 border border-stone-300 flex items-center justify-center text-stone-900 shadow-sm">
+                        <span className="material-symbols-outlined text-lg font-bold leading-none">expand_more</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
