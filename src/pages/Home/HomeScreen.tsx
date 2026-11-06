@@ -207,22 +207,36 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
       {/* ======================================================== */}
       <section className="w-full bg-surface-container-lowest py-20 lg:py-28" id="services-matrix">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
-          {/* Section Header */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          {/* Section Header with Organized Quality Callout */}
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-16 gap-8 pb-8 border-b border-stone-200">
             <div>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="w-1.5 h-5 bg-primary" />
-                <span className="font-mono text-xs uppercase tracking-wider text-secondary font-semibold">
+              <div className="flex items-center gap-2 mb-2.5">
+                <span className="w-2 h-6 bg-[#ea580c] rounded-sm" />
+                <span className="font-mono text-xs uppercase tracking-wider text-stone-700 font-extrabold">
                   Specialized Concrete Divisions
                 </span>
               </div>
-              <h2 className="font-display text-3xl sm:text-4xl text-stone-charcoal uppercase tracking-tight font-bold">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-stone-900 uppercase tracking-tight font-black">
                 Engineered Capabilities
               </h2>
             </div>
-            <p className="font-sans text-sm text-secondary max-w-md leading-relaxed">
-              Every yard poured conforms to stringent California C-8 building codes, laser-leveled tolerances, and custom finish requirements.
-            </p>
+
+            {/* Organized C-8 Quality Standards Callout */}
+            <div className="bg-stone-50 border-2 border-stone-200 border-l-4 border-l-[#ea580c] p-5 sm:p-6 rounded-xl shadow-sm max-w-lg flex items-start gap-4">
+              <div className="w-10 h-10 rounded-lg bg-[#ea580c]/10 border border-[#ea580c]/30 flex items-center justify-center shrink-0 text-[#ea580c]">
+                <span className="material-symbols-outlined text-2xl font-bold">verified</span>
+              </div>
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="font-mono text-[11px] uppercase tracking-wider text-stone-900 font-black">
+                    California C-8 Specification Standards
+                  </span>
+                </div>
+                <p className="font-sans text-xs sm:text-sm text-stone-700 leading-relaxed font-medium">
+                  Every yard poured conforms to stringent California C-8 building codes, laser-leveled tolerances, and custom finish requirements.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Grid of 3 Specialized Divisions */}

@@ -34,7 +34,7 @@ export const CONCRETE_DIVISIONS: ConcreteDivision[] = [
     subtitle: 'Commercial Pours',
     description: 'Broom finish concrete, foundation slabs, light & heavy commercial installations, curb and gutter.',
     tags: ['Broom Finish', 'Foundation Slabs', 'Curb & Gutter'],
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCepbAk4YDiu-W7dS2GmMLicPMQYzlpVHW-9BvEN1t3-kY70r3iiL9dfIJ-hORl-BU_5xZd3bwJp6pQsEFH3ndPWBYYmIfND49KaqhZM3B7JBGtlJarIgJozzsPVHBcSup17hlB0qEj5QYSVR-2ZWKXKx2KZTiGHaP4xJ2Dkb_2s0HTY5iVBH2R7wJ7wGidHiiAAHnJB7ClPLcZ7QjKAmjky6HLCVXhq1uWj7dd5a0',
+    imageUrl: '/images/bay-structural.jpg',
     imageAlt: 'Commercial poured foundation slab with precision rebar reinforcement and smooth broom finish',
   },
   {
@@ -46,7 +46,7 @@ export const CONCRETE_DIVISIONS: ConcreteDivision[] = [
     subtitle: 'Custom Pours',
     description: 'Custom textures, slate embossing, integral dyes, pool decks, patios, and weather-sealed finishes.',
     tags: ['Ashlar Slate', 'Color & Seal', 'Pool Decks'],
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD_ogrxj7bkk0opth9HP4RyuYXE8WwCGvg_Oo0zNJeIcZngzYaNWOLm7G2RYROhHmmtVzZAI0SDQwkyLOEQcNx6-o9ZgM6rfF4W0lW5QIqevmH4mMzNZg3GiDxlRsO_CzVKxkYD2Ghn3rwHMqRfB06989tL7E4msO66-Bl2EkFrfH4JyHd2_9Lw9QBnlCjY7VajoUKOz0uS-OE5fviOfkGybNAv7PlefryFxhwNoEQ',
+    imageUrl: '/images/bay-decorative.jpg',
     imageAlt: 'High quality custom decorative stamped concrete patio floor featuring slate and flagstone patterns with rich warm earth tone color sealant',
   },
   {
@@ -58,7 +58,7 @@ export const CONCRETE_DIVISIONS: ConcreteDivision[] = [
     subtitle: 'Heavy Civil',
     description: 'Patch & repair concrete, approach slabs, engineered retaining walls, seismic grading, and structural remediation.',
     tags: ['Patch & Repair', 'Approach Slabs', 'Retaining Walls'],
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAv-2cIoCY7c_jBotAjA1K4RVjFrGNz2g4MVx56v9sccjzKAamZZI-rhni7En2T4uvC2pPUESqyYZSIfVbDptYZ0H4HXULI5uRClfQm-NlvVKW2UlTAdo8SX6FSxlvgzpBoMX81D8eGKMbniplTuW-UCJT94h-wzFDlCtOAWE2xerNVb3wC2YHXzWDnu1P5CvEvRkctDkNjVuNstNPCJJsSP8NAWJ1xLm-Hjxt8j5w',
+    imageUrl: '/images/bay-civil.jpg',
     imageAlt: 'Reinforced concrete retaining wall and civil approach slab under engineered laser grade alignment',
   },
 ];
